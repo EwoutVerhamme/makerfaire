@@ -1,2 +1,2 @@
-kampioen zijn is plezant!
+Maker Faire Gent
 
