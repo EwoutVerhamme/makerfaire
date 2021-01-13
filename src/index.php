@@ -13,13 +13,9 @@ if (file_exists("../.env")) {
 
 $routes = array(
   'home' => array(
-    'controller' => 'Episodes',
+    'controller' => 'Order',
     'action' => 'index'
   ),
-  'detail' => array(
-    'controller' => 'Episodes',
-    'action' => 'detail'
-  )
 );
 
 if(empty($_GET['page'])) {

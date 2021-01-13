@@ -12,26 +12,19 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Alles over de kampioenen">
 
-    <title>FC De kampioenen - <?php echo $title; ?></title>
+    <title>Maker Faire -  <?php echo $title; ?></title>
     <?php echo $css;?>
-  </head>Ò
+  </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <a aria-label="terug naar home" href="index.php">
-        <h1 class="header__title"><span class="hidden">FC De Kampioenen</span></h1>
-        </a>
-        <?php if (!empty($_SESSION['info'])): ?>
+  <?php if (!empty($_SESSION['info'])): ?>
           <div class="box info"><?php echo $_SESSION['info']; ?></div>
         <?php endif; ?>
         <?php if (!empty($_SESSION['error'])): ?>
           <div class="box error"><?php echo $_SESSION['error']; ?></div>
         <?php endif; ?>
-      </header>
-      <main>
+
         <?php echo $content; ?>
-      </main>
-    </div>
+  
     <?php echo $js; ?>
   </body>
 </html>
