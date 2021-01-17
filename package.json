@@ -50,6 +50,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "lottie-web": "^5.7.6",
     "pickerjs": "^1.2.1",
     "regenerator-runtime": "^0.13.7"
   }
