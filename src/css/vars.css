@@ -1,25 +1,23 @@
 :root {
-    --colorLightest: white;
-    --colorText: #211f1f;
-    --colorMain: #ee090c;
-    --colorBorder: #c7c7c7;
-    --colorSecondary: #ffe408;
-    --colorLight: rgba(71, 55, 255, .08);
-    --colorGrayDark: #9c9c9c;
-    --spacerSmall: .75rem;
-    --spacerRegular: 1rem;
-    --spacerBig: 1.88rem;
-    --fontSmall: 1rem;
-    --fontRegular: 1.25rem;
-    --fontMedium: 1.75rem;
-    --fontBig: 2.5rem;
-    --font: 'arial', sans-serif;
-    --fontAlt: 'news-gothic-std', serif;
-    --fontWeightRegular: 400;
-    --fontWeightBold: 500;
-    --fontWeightAlt: 700;
-  }
-  
-  @custom-media --only-small-screen (width <= 320px);
-  @custom-media --only-regular-screen (width <= 768px);
-  @custom-media --only-medium-screen (width <= 900px);
+  --colorBackground: #f0f9fd;
+  --colorText: #535353;
+  --colorMain: #32298d;
+  --colorSecondary: #00cad8;
+  --spacerSmall: 0.75rem;
+  --spacerRegular: 1rem;
+  --spacerBig: 1.88rem;
+  --fontSmall: 1rem;
+  --fontRegular: 1.25rem;
+  --fontMedium: 1.75rem;
+  --fontBig: 2.5rem;
+  --font: "Poppins", sans-serif;
+  --fontAlt: "arial", serif;
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightBold: 500;
+  --fontWeightAlt: 700;
+}
+
+@custom-media --only-small-screen (width <= 320px);
+@custom-media --only-regular-screen (width <= 768px);
+@custom-media --only-medium-screen (width <= 900px);

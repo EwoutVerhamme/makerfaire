@@ -11,7 +11,7 @@ class OrderController extends Controller {
     $this->orderDAO = new OrderDAO();
   }
 
-  public function index() {
+  public function home() {
     $this->set('title', 'Home');
   }
 
