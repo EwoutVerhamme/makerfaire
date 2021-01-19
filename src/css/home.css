@@ -1,22 +1,28 @@
 .header {
-    height: 100%
+    height: 100%;
+    background-image: url(/assets/img/home/header_bg.svg)
+}
+
+.header__info {
+    padding-top: 5rem;
 }
 
 .header__title {
     text-align: center;
     font-size: var(--fontBig);
     font-weight: var(--fontWeightAlt);
-    margin-top: 5rem;
     color: var(--colorMain);
 }
 
 .subtext {
     text-align: center;
-    font-size: var(--fontRegular);
+    font-size: var(--fontSmall);
     font-weight: var(--fontWeightLight);
-    margin-top: var(--spacerBig);
     color: var(--colorText);
     line-height: 1.8rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-top: var(--spacerBig);
 }
 
 .button__wrapper {
@@ -32,7 +38,9 @@
     color: white;
     border-radius: 5px;
     height: 4rem;
-    width: 16rem;
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: var(--fontRegular);
 }
 
@@ -45,7 +53,7 @@
     margin-top: 5rem;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .info__left {
@@ -56,6 +64,7 @@
 .info__right {
     justify-self: center;
     align-self: flex-start;
+    margin: 0 auto;
 }
 
 .info__title {
@@ -69,4 +78,57 @@
 .info__subtext {
     text-align: left;
     max-width: 40rem;
+    margin: 1rem;
 }
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.number__box {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+}
+
+.number__text {
+    font-weight: var(--fontWeightBold);
+    font-size: var(--fontMedium);
+}
+
+.number__name{
+    font-size: var(--fontRegular);
+    margin-top: 1rem;
+}
+
+.footer {
+    background-color: var(--colorBackground);
+}
+
+.sponsors {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.sponsor__img {
+    margin: 1rem;
+}
+
+@media only screen and (min-width: 678px) {
+    .info {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+  }
