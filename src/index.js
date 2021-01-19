@@ -1,4 +1,4 @@
 require('./style.css');
-require("./js/script")
+import './js/script.js';
 
 
