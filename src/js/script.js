@@ -1,13 +1,14 @@
 {
-  // Global 
-  let previousStepIndex;
-  let currentStepIndex; 
-
   // Selectors
 const navigation = document.querySelector('.nav');
 const tutorialButton = document.querySelectorAll('.tutorial__button');
-const previousStep = document.querySelector(`.step__${previousStepIndex}`);
-const currentStep = document.querySelector(`.step__${currentStepIndex}`);
+
+const step0 = document.querySelector('.step__0');
+const step1 = document.querySelector('.step__1');
+const step2 = document.querySelector('.step__2');
+const step3 = document.querySelector('.step__3');
+const step4 = document.querySelector('.step__4');
+
 
 // BEGIN TUTORIAL CODE
 tutorialButton.forEach(button => {
@@ -15,38 +16,32 @@ tutorialButton.forEach(button => {
     
     switch(e.target.id) {
       case "0":
-        previousStepIndex = 0
-        currentStepIndex = 1;
-        previousStep.classList.add("hidden");
-        currentStep.classList.add("visible");
-
+        step0.classList.add("hidden");
+        step1.classList.add('visible');
         break;
       case "1":
-        previousStepIndex = 1
-        currentStepIndex = 2
-        console.log(previousStep)
-        console.log(currentStep)
-        // previousStep.classList.add("hidden");
-        // previousStep.classList.remove("visible");
-        // currentStep.classList.remove("hidden");
-        // currentStep.classList.add("visible");
+        step1.classList.add("hidden");
+        step1.classList.remove("visible");
+        step2.classList.add('visible');
+        step2.classList.remove('hidden');
         break;
         case "2":
-          previousStepIndex++
-          currentStepIndex++;
-          previousStep.classList.add("hidden");
-          previousStep.classList.remove("visible");
-          currentStep.classList.remove("hidden");
-          currentStep.classList.add("visible");
+          step2.classList.add("hidden");
+          step2.classList.remove("visible");
+          step3.classList.add('visible');
+          step3.classList.remove('hidden');
         break;
-        case "step step__3":
-          console.log("stap 3")
+        case "3":
+          step3.classList.add("hidden");
+          step3.classList.remove("visible");
+          step4.classList.add('visible');
+          step4.classList.remove('hidden');
         break;
         case "step step__4":
           console.log("stap 4")
         break;
       default:
-        // code block
+        console.log("Error")
     }
   })
 });
