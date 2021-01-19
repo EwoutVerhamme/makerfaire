@@ -1,6 +1,8 @@
 .header {
     height: 100%;
-    background-image: url(/assets/img/home/header_bg.svg)
+    background-image: url(/assets/img/home/header_bg.svg);
+    background-position: center;
+    background-repeat:repeat
 }
 
 .header__info {
@@ -20,7 +22,7 @@
     font-weight: var(--fontWeightLight);
     color: var(--colorText);
     line-height: 1.8rem;
-    max-width: 30rem;
+    max-width: 50rem;
     margin: 0 auto;
     margin-top: var(--spacerBig);
 }
@@ -63,7 +65,7 @@
 
 .info__right {
     justify-self: center;
-    align-self: flex-start;
+    align-self: center;
     margin: 0 auto;
 }
 
@@ -78,7 +80,8 @@
 .info__subtext {
     text-align: left;
     max-width: 40rem;
-    margin: 1rem;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .numbers {
@@ -110,6 +113,7 @@
 
 .footer {
     background-color: var(--colorBackground);
+    padding-bottom: 1rem;
 }
 
 .sponsors {
@@ -126,9 +130,33 @@
     margin: 1rem;
 }
 
+.footer__bottom--text {
+    text-align: center;
+}
+
+.footer__text {
+    font-size: var(--fontSmall);
+    margin: var(--spacerRegular);
+}
+
 @media only screen and (min-width: 678px) {
     .info {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .info__right {
+        justify-self: flex-end;
+        align-self: center;
+        margin: 0;
+    }
+    
+    .info__title {
+        text-align: left;
+    }
+    
+    .info__subtext {
+        text-align:left;
+    }
+
   }
