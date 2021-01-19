@@ -16,12 +16,13 @@
             Kom racen met je eigen gebouwde racewagen op de
             Maker Faire <span class="span">30 april, 1 & 2 mei 2021! </span></p>
         <div class="button__wrapper">
-            <a href="index.php?page=tutorial" class="button highlight">Naar de tutorial</a>
+            <a href="index.php?page=tutorial" class="a__button">Naar de tutorial</a>
         </div>
     </div>
 </header>
+<div id="makerfaire" class="spacer"></div>
 <main class="container">
-    <div id="makerfaire" class="info">
+    <div class="info">
         <div class="info__left">
             <img src="../../assets/img/home/logo.png" alt="" class="info__left--img">
         </div>
