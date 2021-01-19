@@ -1,5 +1,6 @@
 .nav {
   width: 100vw;
+  position: fixed;
 }
 
 .menu {
@@ -23,6 +24,10 @@
   color: var(--colorText);
 }
 
+.nav__img {
+  margin-left: 2rem;
+}
+
 .highlight {
   background-color: var(--colorSecondary);
   color: white;
@@ -31,4 +36,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+}
+
+.nav-colored { 
+  background-color:white; 
+  transition: .2s ease-in-out;
+}
+
+.nav-transparent { 
+  background-color:transparent;
+  transition: .2s ease-in-out;
 }

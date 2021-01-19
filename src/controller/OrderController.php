@@ -15,4 +15,12 @@ class OrderController extends Controller {
     $this->set('title', 'Home');
   }
 
+  public function kit() {
+    $this->set('title', 'DIY-pakket');
+  }
+
+  public function tutorial() {
+    $this->set('title', 'Tutorial');
+  }
+
 }

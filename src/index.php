@@ -16,6 +16,14 @@ $routes = array(
     'controller' => 'Order',
     'action' => 'home'
   ),
+  'kit' => array(
+    'controller' => 'Order',
+    'action' => 'kit'
+  ),
+  'tutorial' => array(
+    'controller' => 'Order',
+    'action' => 'tutorial'
+  ),
 );
 
 if(empty($_GET['page'])) {
