@@ -6,16 +6,16 @@
   --spacerSmall: 0.75rem;
   --spacerRegular: 1rem;
   --spacerBig: 1.88rem;
-  --fontSmall: 1rem;
-  --fontRegular: 1.25rem;
+  --fontSmall: 1.25rem;
+  --fontRegular: 1.5rem;
   --fontMedium: 1.75rem;
-  --fontBig: 2.5rem;
+  --fontBig: 4rem;
   --font: "Poppins", sans-serif;
   --fontAlt: "arial", serif;
   --fontWeightLight: 300;
   --fontWeightRegular: 400;
   --fontWeightBold: 500;
-  --fontWeightAlt: 700;
+  --fontWeightAlt: 600;
 }
 
 @custom-media --only-small-screen (width <= 320px);

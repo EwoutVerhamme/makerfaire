@@ -1,3 +1,72 @@
 .header {
+    height: 100%
 }
 
+.header__title {
+    text-align: center;
+    font-size: var(--fontBig);
+    font-weight: var(--fontWeightAlt);
+    margin-top: 5rem;
+    color: var(--colorMain);
+}
+
+.subtext {
+    text-align: center;
+    font-size: var(--fontRegular);
+    font-weight: var(--fontWeightLight);
+    margin-top: var(--spacerBig);
+    color: var(--colorText);
+    line-height: 1.8rem;
+}
+
+.button__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin-top: 2rem;
+    background-color: var(--colorSecondary);
+    border: none;
+    font-family: var(--font);
+    color: white;
+    border-radius: 5px;
+    height: 4rem;
+    width: 16rem;
+    font-size: var(--fontRegular);
+}
+
+.span {
+    font-weight: var(--fontWeightBold);
+}
+
+.info {
+    max-width: 80rem;
+    margin-top: 5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.info__left {
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.info__right {
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.info__title {
+    font-size: var(--fontBig);
+    font-weight: var(--fontWeightAlt);
+    margin-top: 5rem;
+    color: var(--colorMain);
+    text-align: center;
+}
+
+.info__subtext {
+    text-align: left;
+    max-width: 40rem;
+}

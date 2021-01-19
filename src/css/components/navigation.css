@@ -1,9 +1,4 @@
 .nav {
-  display: grid;
-  justify-self: space-between;
-  align-self: center;
-  height: 6rem;
-  grid-template-columns: 2vw 1fr 2vw;
   width: 100vw;
 }
 
@@ -25,6 +20,7 @@
   font-weight: var(--fontWeightLight);
   padding: 2rem;
   text-decoration: none;
+  color: var(--colorText);
 }
 
 .highlight {
