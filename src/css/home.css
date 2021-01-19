@@ -1,5 +1,6 @@
 .header {
     height: 100%;
+    width: 100vw;
     background-image: url(/assets/img/home/header_bg.svg);
     background-position: center;
     background-repeat:repeat;
@@ -26,6 +27,8 @@
     max-width: 50rem;
     margin: 0 auto;
     margin-top: var(--spacerBig);
+    margin-left: var(--spacerSmall);
+    margin-right: var(--spacerSmall);
 }
 
 .button__wrapper {
@@ -40,15 +43,37 @@
     font-family: var(--font);
     color: white;
     border-radius: 5px;
-    height: 4rem;
+    height: 7rem;
     width: fit-content;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: var(--fontRegular);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: var(--fontMedium);
+}
+
+.a__button {
+    margin-top: 2rem;
+    background-color: var(--colorSecondary);
+    border: none;
+    font-family: var(--font);
+    color: white;
+    border-radius: 5px;
+    height: 6rem;
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: var(--fontMedium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .span {
     font-weight: var(--fontWeightBold);
+}
+
+.spacer {
+    height: 3rem;
 }
 
 .container {
