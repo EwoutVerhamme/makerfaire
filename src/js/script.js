@@ -24,8 +24,8 @@ tutorialButton.forEach(button => {
     switch(e.target.id) {
       case "0":
         header.style.filter =  "blur(8px)";
-        // navigation.style.filter =  "blur(8px)";
-        popup.style.zIndex = "5"
+        popup.style.zIndex = "5";
+        popup.style.animation = "fadein 2s"
         break;
       case "1":
         step1.classList.add("hidden");

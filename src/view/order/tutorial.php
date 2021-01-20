@@ -8,8 +8,8 @@
             dolore magna aliqua. Ut enim ad minim veniam.
         </p>
         <div class="popup__buttons">
-            <button class="popup__button button1">Welk materiaal?</button>
-            <button class="popup__button button2">Ja, let's begin!</button>
+            <button class="button popup__button button1">Welk materiaal?</button>
+            <button class="button button2">Ja, let's begin!</button>
         </div>
     </div>
 </div>
