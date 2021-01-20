@@ -58,7 +58,13 @@
     </div>
 </header>
 
-<div class="step__wrapper">
+<div class="steps__wrapper hidden">
+    <nav class="steps__menu">
+        <ul class="steps__menu--items">
+            <li><a class="steps__menu--item back" href="index.php?page=tutorial">Verlaat de tutorial</a></li>
+            <li class="steps__menu--item tip">Vraag tips</li>
+        </ul>
+    </nav>
     <section class="step step__1 hidden">
         <h1 style="font-size: 3rem">Stap 1</h1>
         <button id="1" class="button tutorial__button">Volgende</button>

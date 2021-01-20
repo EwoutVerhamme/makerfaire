@@ -2,10 +2,6 @@
     display: none;
 }
 
-.visible{
-    display: unset;
-}
-
 .indicators{
 display: flex;
 align-items: center;
@@ -106,6 +102,65 @@ justify-content: center;
 
 /* END OF POPUP STYLING */
 
+
+
+/* TUTORIAL STEP STYLING */
+.steps__wrapper {
+    height: 100%;
+    width: 100vw;
+    background-image: url(/assets/img/home/header_bg.svg);
+    background-position: center;
+    background-repeat:repeat;
+    background-color: white;
+    z-index: -5;
+    position: absolute;
+} 
+
+.steps__menu--items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.steps__menu--item {
+    font-size: var(--fontRegular);
+    font-weight: var(--fontWeightBold);
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--colorMain);
+}
+
+.back::before {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/img/tutorial/back.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+    margin: .8rem;
+}
+
+.tip::after {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/img/tutorial/tip.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+    margin: .8rem;
+}
+
+
+/* END OF TUTORIAL STEP STYLING */
+
+
+
 @media only screen and (min-width: 678px) {
 
     .indicators{
@@ -115,10 +170,10 @@ justify-content: center;
     }
 
 
-    /* POPUP STYLING */
+    /* POPUP STYLING 678PX */
 
 .popup {
-    height: 40rem;
+    height: 25rem;
     width: 50rem;
 
 }

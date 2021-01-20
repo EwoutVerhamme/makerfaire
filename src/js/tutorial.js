@@ -15,6 +15,7 @@
   const noHandTrack = document.querySelector('.nohandtrack');
   
   // SELECT ALL THE STEPS
+  const stepsWrapper = document.querySelector('.steps__wrapper')
   const step0 = document.querySelector('.step__0');
   const step1 = document.querySelector('.step__1');
   const step2 = document.querySelector('.step__2');
@@ -50,9 +51,9 @@
               // REMOVE POPUP, NAV, LEVEL AND GO TO STEP 1
               popup.style.display = "none";
               header.style.display =  "none";
-              step1.classList.add('visible');
+              stepsWrapper.classList.remove('hidden');
+              stepsWrapper.style.zIndex = "6"
               step1.classList.remove('hidden');
-              
               break;
             case "want":
             // UPDATE THE POPUP
@@ -65,24 +66,15 @@
             break;
         case "1":
           step1.classList.add("hidden");
-          step1.classList.remove("visible");
-          step2.classList.add('visible');
           step2.classList.remove('hidden');
           break;
           case "2":
             step2.classList.add("hidden");
-            step2.classList.remove("visible");
-            step3.classList.add('visible');
             step3.classList.remove('hidden');
           break;
           case "3":
             step3.classList.add("hidden");
-            step3.classList.remove("visible");
-            step4.classList.add('visible');
             step4.classList.remove('hidden');
-          break;
-          case "step step__4":
-            console.log("stap 4")
           break;
         default:
           console.log("Error")
