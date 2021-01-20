@@ -1,6 +1,6 @@
 <nav class="nav">
     <div class="menu">
-        <img src="../../assets/img/home/logo_nav.svg" alt="Maker Faire navigation logo" class="nav__img">
+        <a class="menu__item" href="index.php"><img src="../../assets/img/home/logo_nav.svg"></a>
         <ul class="menu__items">
             <li class="menu__item"><a class="menu__item" href="index.php#makerfaire">Maker Faire</a></li>
             <li class="menu__item"><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>

@@ -2,9 +2,16 @@
   // Selectors
 const navigation = document.querySelector('.nav');
 const tutorialButton = document.querySelectorAll('.tutorial__button');
-const secondNavigation = document.querySelector('.second__nav')
+const header = document.querySelector('.header')
 
-const step0 = document.querySelector('.step__0');
+// SELECT THE POPUP TO CHANCE HTML
+const popup = document.querySelector('.popup__wrapper');
+const popupTitle = document.querySelector('.popup__title');
+const popupSubtext = document.querySelector('.popup__subtext');
+const popupButton1 = document.querySelector('.button1');
+const popupButton2 = document.querySelector('.button2');
+
+// SELECT ALL THE STEPS
 const step1 = document.querySelector('.step__1');
 const step2 = document.querySelector('.step__2');
 const step3 = document.querySelector('.step__3');
@@ -14,15 +21,11 @@ const step4 = document.querySelector('.step__4');
 // BEGIN TUTORIAL CODE
 tutorialButton.forEach(button => {
   button.addEventListener('click', (e) => {
-    
     switch(e.target.id) {
       case "0":
-        navigation.classList.add('hidden');
-        secondNavigation.classList.remove('hidden');
-        secondNavigation.classList.add('visible');
-        step0.classList.add("hidden");
-        step1.classList.add('visible');
-        navigation.classList.add("hidden");
+        header.style.filter =  "blur(8px)";
+        // navigation.style.filter =  "blur(8px)";
+        popup.style.zIndex = "5"
         break;
       case "1":
         step1.classList.add("hidden");

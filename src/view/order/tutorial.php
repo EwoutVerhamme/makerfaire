@@ -1,7 +1,22 @@
+<div class="popup__wrapper">
+    <div class="popup">
+        <p class="popup__title">
+            Hebt u al het materiaal?
+        </p>
+        <p class="popup__subtext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <div class="popup__buttons">
+            <button class="popup__button button1">Welk materiaal?</button>
+            <button class="popup__button button2">Ja, let's begin!</button>
+        </div>
+    </div>
+</div>
 <header class="header">
     <nav class="nav">
         <div class="menu">
-            <img src="../../assets/img/home/logo_nav.svg" alt="Maker Faire navigation logo" class="nav__img">
+            <a class="menu__item" href="index.php"><img src="../../assets/img/home/logo_nav.svg"></a>
             <ul class="menu__items">
                 <li class="menu__item"><a class="menu__item" href="index.php">Maker Faire</a></li>
                 <li class="menu__item"><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
@@ -10,10 +25,6 @@
             </ul>
         </div>
     </nav>
-    <div class="second__nav">
-        <p class="second__nav--text">Verlaat de tutorial</p>
-        <p class="second__nav--text">Vraag tips</p>
-    </div>
     <div class="header__info step__0">
         <h1 class="header__title">Dragracewagen tutorial</h1>
         <p class="header__subtext subtext">
