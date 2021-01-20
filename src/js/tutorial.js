@@ -26,45 +26,43 @@
   tutorialButton.forEach(button => {
     button.addEventListener('click', (e) => {
       switch(e.target.id) {
-        case "material":
-          // SET NEW ID FOR BUTTON
-          popupButton2.setAttribute("id", "dontwant" )
-          window.location = "index.php?page=kit";
-          break;
-          case "letsgo":
-          // SET NEW ID FOR BUTTON
-          popupButton1.setAttribute("id", "dontwant" )
-          popupButton2.setAttribute("id", "want" )
-          // UPDATE THE POPUP
-          popupTitle.innerHTML = "Ooh, nog even dit";
-          popupSubtext.innerHTML = "Wij maken gebruik van je camera en handen om verder te gaan naar de volgende stap. Zo kan je zelf met vieze handen navigeren door onze tutorial!";
-          popupButton1.textContent = "Liever niet";
-          popupButton2.textContent = "Lijkt me leuk!";
-          break;
-          case "dontwant":
-            // REMOVE POPUP, NAV, LEVEL AND GO TO STEP 1
-            popup.style.display = "none";
-            header.style.display =  "none";
-            step1.classList.add('visible');
-            step1.classList.remove('hidden');
-            
-            break;
-          case "want":
-          // UPDATE THE POPUP
-          popupTitle.innerHTML = "En dit...";
-          popupSubtext.innerHTML = "Maak een zwaai beweging met 1 hand voor je camera om naar de volgende stap te gaan. Wil je toch liever klikken of werkt er iets niet? Geen probleem, even goede vrienden!";
-          handtrack.style.display = "flex"
-          noHandTrack.innerHTML = "Ik wil toch liever klikken"
-          popupButtons.style.display = "none";
-          
-          break;
         case "0":
           header.style.filter =  "blur(8px)";
           popup.style.zIndex = "5";
           popup.style.animation = "fadein 2s"
-          step0.classList.add("hidden");
-          step0.classList.remove("visible");
           break;
+          case "material":
+            // SET NEW ID FOR BUTTON
+            popupButton2.setAttribute("id", "dontwant" )
+            window.location = "index.php?page=kit";
+            break;
+            case "letsgo":
+            // SET NEW ID FOR BUTTON
+            popupButton1.setAttribute("id", "dontwant" )
+            popupButton2.setAttribute("id", "want" )
+            // UPDATE THE POPUP
+            popupTitle.innerHTML = "Ooh, nog even dit";
+            popupSubtext.innerHTML = "Wij maken gebruik van je camera en handen om verder te gaan naar de volgende stap. Zo kan je zelf met vieze handen navigeren door onze tutorial!";
+            popupButton1.textContent = "Liever niet";
+            popupButton2.textContent = "Lijkt me leuk!";
+            break;
+            case "dontwant":
+              // REMOVE POPUP, NAV, LEVEL AND GO TO STEP 1
+              popup.style.display = "none";
+              header.style.display =  "none";
+              step1.classList.add('visible');
+              step1.classList.remove('hidden');
+              
+              break;
+            case "want":
+            // UPDATE THE POPUP
+            popupTitle.innerHTML = "En dit...";
+            popupSubtext.innerHTML = "Maak een zwaai beweging met 1 hand voor je camera om naar de volgende stap te gaan. Wil je toch liever klikken of werkt er iets niet? Geen probleem, even goede vrienden!";
+            handtrack.style.display = "flex"
+            noHandTrack.innerHTML = "Ik wil toch liever klikken"
+            popupButtons.style.display = "none";
+            
+            break;
         case "1":
           step1.classList.add("hidden");
           step1.classList.remove("visible");

@@ -41,6 +41,25 @@
   text-decoration: none;
 }
 
+.language {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.language__text {
+  padding: .5rem;
+  font-size: var(--fontRegular);
+  font-weight: var(--fontWeightLight);
+  text-decoration: none;
+  color: var(--colorText);
+}
+
+.active {
+  color: var(--colorMain);
+  font-weight: var(--fontWeightBold);
+}
+
 .nav-colored { 
   background-color:white; 
   transition: .2s ease-in-out;
