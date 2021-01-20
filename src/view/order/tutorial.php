@@ -10,6 +10,10 @@
             </ul>
         </div>
     </nav>
+    <div class="second__nav">
+        <p class="second__nav--text">Verlaat de tutorial</p>
+        <p class="second__nav--text">Vraag tips</p>
+    </div>
     <div class="header__info step__0">
         <h1 class="header__title">Dragracewagen tutorial</h1>
         <p class="header__subtext subtext">
@@ -19,6 +23,17 @@
         <div class="button__wrapper">
             <button id="0" class="button tutorial__button">Start de tutorial</button>
         </div>
+        <div class="indicators">
+            <div class="indicator">
+                <img height="80" src="../../assets/img/tutorial/time.svg" alt="" class="indicator__img">
+                <p class="indicator__text">3 uur</p>
+            </div>
+            <div class="indicator">
+                <img height="81" src="../../assets/img/tutorial/difficulty.svg" alt="" class="indicator__img">
+                <p class="indicator__text">moeilijk</p>
+            </div>
+        </div>
+
     </div>
     <section class="step step__1 hidden">
         <h1 style="font-size: 3rem">Stap 1</h1>

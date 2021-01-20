@@ -5,3 +5,41 @@
 .visible{
     display: unset;
 }
+
+.second__nav {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.second__nav--text {
+    font-size: var(--fontMedium);
+    font-weight: var(--fontWeightAlt);
+    color: var(--colorMain);
+}
+
+.indicators{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+.indicator__text {
+    margin-top: var(--spacerSmall);
+    font-size: var(--fontMedium);
+}
+
+.indicator__img {
+
+}

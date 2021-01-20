@@ -2,6 +2,7 @@
   // Selectors
 const navigation = document.querySelector('.nav');
 const tutorialButton = document.querySelectorAll('.tutorial__button');
+const secondNavigation = document.querySelector('.second__nav')
 
 const step0 = document.querySelector('.step__0');
 const step1 = document.querySelector('.step__1');
@@ -16,8 +17,12 @@ tutorialButton.forEach(button => {
     
     switch(e.target.id) {
       case "0":
+        navigation.classList.add('hidden');
+        secondNavigation.classList.remove('hidden');
+        secondNavigation.classList.add('visible');
         step0.classList.add("hidden");
         step1.classList.add('visible');
+        navigation.classList.add("hidden");
         break;
       case "1":
         step1.classList.add("hidden");
