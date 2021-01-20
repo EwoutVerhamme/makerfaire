@@ -43,10 +43,13 @@ justify-content: center;
     width: 50rem;
     text-align: center;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .popup__title {
-    margin-top: 1rem;
     font-size: var(--fontMedium);
     font-weight: var(--fontWeightAlt);
     color: var(--colorMain);
@@ -73,6 +76,21 @@ justify-content: center;
     background-color: transparent;
     border: .2rem solid var(--colorSecondary);
     color: var(--colorText);
+}
+
+.handtrack {
+    display: none;
+    text-align: center;
+    font-size: var(--fontSmall);
+    color: var(--colorMain);
+    font-family: var(--fontWeightBold);
+}
+.nohandtrack {
+    text-decoration: underline;
+    font-size: var(--fontSmall);
+    font-family: var(--fontWeightLight);
+    color: var(--colorText);
+    cursor: pointer;
 }
 
 /* END OF POPUP STYLING */

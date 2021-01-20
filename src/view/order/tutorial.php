@@ -1,15 +1,19 @@
 <div class="popup__wrapper">
     <div class="popup">
-        <p class="popup__title">
-            Hebt u al het materiaal?
-        </p>
-        <p class="popup__subtext">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
-        <div class="popup__buttons">
-            <button class="button popup__button button1">Welk materiaal?</button>
-            <button class="button button2">Ja, let's begin!</button>
+        <div class="popup__info--wrapper">
+            <p class="popup__title">
+                Hebt u al het materiaal?
+            </p>
+            <p class="popup__subtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+            <div class="popup__buttons">
+                <button id="material" class="button popup__button tutorial__button button1">Welk materiaal?</button>
+                <button id="letsgo" class="button tutorial__button button2">Ja, let's begin!</button>
+            </div>
+            <p class="handtrack">Handtracking laden...</p>
+            <p class="nohandtrack"></p>
         </div>
     </div>
 </div>
@@ -46,6 +50,9 @@
         </div>
 
     </div>
+</header>
+
+<div class="step__wrapper">
     <section class="step step__1 hidden">
         <h1 style="font-size: 3rem">Stap 1</h1>
         <button id="1" class="button tutorial__button">Volgende</button>
@@ -65,4 +72,4 @@
         <h1 style="font-size: 3rem">Stap 4</h1>
         <button id="4" class="button tutorial__button">Volgende</button>
     </section>
-</header>
+</div>

@@ -31,7 +31,6 @@
     <?php endif; ?>
 
     <?php echo $content; ?>
-
     <?php echo $js; ?>
 </body>
 
