@@ -23,7 +23,7 @@
         <div class="menu">
             <a class="menu__item" href="index.php"><img src="../../assets/img/home/logo_nav.svg"></a>
             <ul class="menu__items">
-                <li><a class="menu__item" href="#makerfaire">Maker Faire</a></li>
+                <li><a class="menu__item" href="index.php">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
@@ -35,7 +35,7 @@
             </ul>
         </div>
     </nav>
-    <div class="header__info step__0">
+    <div class="header__info">
         <h1 class="header__title">Dragracewagen tutorial</h1>
         <p class="header__subtext subtext">
             Welkom bij de tutorial! Hierin helpen we je om een échte dragracewagen te bouwen. Het is belangrijk <span

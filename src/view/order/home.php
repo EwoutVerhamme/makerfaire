@@ -3,7 +3,7 @@
         <div class="menu">
             <a class="menu__item" href="index.php"><img src="../../assets/img/home/logo_nav.svg"></a>
             <ul class="menu__items">
-                <li><a class="menu__item" href="#makerfaire">Maker Faire</a></li>
+                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>

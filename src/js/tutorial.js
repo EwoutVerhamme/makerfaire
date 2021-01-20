@@ -16,12 +16,45 @@
   
   // SELECT ALL THE STEPS
   const stepsWrapper = document.querySelector('.steps__wrapper')
-  const step0 = document.querySelector('.step__0');
   const step1 = document.querySelector('.step__1');
   const step2 = document.querySelector('.step__2');
   const step3 = document.querySelector('.step__3');
   const step4 = document.querySelector('.step__4');
-  
+  const back = document.querySelector('.back');
+
+  // REMOVE YOUR CURRENT STEP FROM LOCALSTORAGE WHEN LEAVING
+  back.addEventListener('click', () => {
+    localStorage.removeItem('step')
+  })
+
+  // CHECK YOUR LAST STEP OUT OF LOCALSTORAGE
+  if(localStorage.getItem("step")){
+    console.log(localStorage.getItem("step"))
+    switch(localStorage.getItem("step")) {
+      case 0:
+        header.style.filter =  "blur(8px)";
+        popup.style.zIndex = "5";
+        popup.style.animation = "fadein 2s"
+        break;
+        case 1:
+          step1.classList.add("hidden");
+          step2.classList.remove('hidden');
+          localStorage.setItem('step', 2);
+          break;
+          case 2:
+            step2.classList.add("hidden");
+            step3.classList.remove('hidden');
+            localStorage.setItem('step', 3);
+            break;
+            case 3:
+              step3.classList.add("hidden");
+              step4.classList.remove('hidden');
+                localStorage.setItem('step', 4);
+              break;
+      default:
+        // window.location = "index.php?page=tutorial";
+    }
+  }
   
   // BEGIN TUTORIAL CODE
   tutorialButton.forEach(button => {
@@ -67,14 +100,17 @@
         case "1":
           step1.classList.add("hidden");
           step2.classList.remove('hidden');
+          localStorage.setItem('step', 2);
           break;
           case "2":
             step2.classList.add("hidden");
             step3.classList.remove('hidden');
+            localStorage.setItem('step', 3);
           break;
           case "3":
             step3.classList.add("hidden");
             step4.classList.remove('hidden');
+              localStorage.setItem('step', 4);
           break;
         default:
           console.log("Error")
