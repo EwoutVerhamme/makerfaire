@@ -114,7 +114,7 @@ justify-content: center;
     background-color: white;
     z-index: -5;
     position: absolute;
-    display: grid;
+    display: none;
     grid-template-rows: 5rem 1fr 5rem;
 } 
 

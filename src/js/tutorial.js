@@ -102,6 +102,7 @@
               header.style.display =  "none";
               stepsWrapper.style.zIndex = "2"
               stepsWrapper.classList.remove('hidden');
+              stepsWrapper.style.display = "grid";
               renderStep(0)
               break;
             case "want":
