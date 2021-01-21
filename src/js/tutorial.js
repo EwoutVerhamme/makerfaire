@@ -21,22 +21,26 @@
   // SELECT ALL THE STEPS
   const stepsWrapper = document.querySelector('.steps__wrapper')
   const back = document.querySelector('.back');
+  const tip = document.querySelector('.tip')
 
   // Select the indicators
   const mobileIndicators = document.querySelectorAll('.mobile__buttons');
   const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
+  const stepsMenuItems = document.querySelectorAll('.steps__menu--item');
 
 
   // Get the device width to set the settings and behaviours
   const checkWindowSize = () => {
     window.addEventListener('resize', checkWindowSize)
-    if(window.innerWidth < 678){
+    if(window.innerWidth < 678 && mobileIndicators){
       mobileIndicators.forEach(mobileIndicator => {
         mobileIndicator.style.display = "flex"
       })
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "none"
       })
+      back.textContent = ""
+      tip.textContent = ""
     }else {
       mobileIndicators.forEach(mobileIndicator => {
         mobileIndicator.style.display = "none"
@@ -44,6 +48,11 @@
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "flex"
       })
+      if(back && tip){
+          back.textContent = "Verlaat de tutorial"
+      tip.textContent = "Vraag tips"
+      }
+    
     }
   }
 
@@ -128,10 +137,7 @@ const stepImg = document.querySelector('.step__right--img');
   });
 
     const renderStep = (stepIndex) => {
-      // If user is going back in the browser 
-      window.onhashchange = () => {
-        stepIndex -1;
-      }
+      updateIndicators(stepIndex)
       // Always set the popups and header to none
       if(popup){
         popup.style.display = "none";
@@ -152,17 +158,29 @@ const stepImg = document.querySelector('.step__right--img');
       stepText.textContent = text[stepIndex];
       localStorage.setItem('step', stepIndex)
   
-      // Set all the indicators colored
-      for(let i = 0; i <= stepIndex; i++){
-        const indicatorActive = document.querySelector(`.indicator${i}`)
-        const indicatorActiveMobile = document.querySelector(`.indicatorMobile${i}`)
-        // Set all the passed indicators to passed
-        
-          indicatorActiveMobile.classList.add("step__indicator--activemobile");
-          indicatorActive.classList.add("step__indicator--active");
-        
-      }
       });      
+    }
+
+    const updateIndicators = (stepIndex) => {
+    // Set all the indicators colored
+    for(let i = 0; i <= stepIndex; i++){
+      const indicatorActive = document.querySelector(`.indicator${i}`)
+      const indicatorActiveMobile = document.querySelector(`.indicatorMobile${i}`)
+
+      if(indicatorActive && indicatorActiveMobile){
+        if(i > stepIndex  ) {
+          // Set all the passed indicators to passed
+          indicatorActiveMobile.classList.remove("step__indicator--activemobile");
+          indicatorActive.classList.remove("step__indicator--active");
+     }else {
+       // Set all the passed indicators to passed
+       
+       indicatorActiveMobile.classList.add("step__indicator--activemobile");
+       indicatorActive.classList.add("step__indicator--active");
+     }
+      }
+  
+}
     }
 
     // Make the step indicators clickable 
