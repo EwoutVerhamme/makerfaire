@@ -75,6 +75,8 @@
 /* Toggler Animation */
 .nav .toggler:checked + .hamburger > div {
   transform: rotate(135deg);
+  background:white;
+  
 }
 
 /* Turns Lines Into X */
@@ -95,7 +97,7 @@
 }
 
 .nav .toggler:checked ~ .menu > div {
-  transform: scale(1);
+  opacity: 1;
   transition-duration: 0.75s;
 }
 
@@ -119,23 +121,28 @@
 
 .nav .menu > div {
   background:rgba(24, 39, 51 , 0.85);
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 250vw;
+  height: 250vh;
   display: flex;
   flex: none;
   align-items: center;
   justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
+  opacity: 0;
+  transition: all 0.2s ease;
 }
 
 .nav .menu > div > div {
   text-align: center;
   max-width: 90vw;
   max-height: 100vh;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.4s ease;
+}
+
+.nav .menu > div > div > ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .nav .menu > div > div > ul > li {
@@ -151,8 +158,6 @@
   transition: color 0.4s ease;
 }
 
-
-
 .language {
   display: flex;
   align-items: center;
@@ -164,7 +169,7 @@
   font-size: var(--fontRegular);
   font-weight: var(--fontWeightLight);
   text-decoration: none;
-  color: var(--colorText);
+  color: white;
 }
 
 .language__text:hover {
@@ -184,6 +189,17 @@
 .nav-transparent { 
   background-color:transparent;
   transition: .2s ease-in-out;
+}
+
+.highlight {
+  background-color: var(--colorSecondary);
+  color: white;
+  border-radius: 5px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 678px) {
@@ -229,16 +245,9 @@
     padding-bottom: 1.2rem;
     height: 3.5rem;
   }
-  
-  .highlight {
-    background-color: var(--colorSecondary);
-    color: white;
-    border-radius: 5px;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+
+  .language__text {
+    color: var(--colorText);
   }
 
 
