@@ -19,6 +19,9 @@
   const back = document.querySelector('.back');
   const tip = document.querySelector('.tip')
 
+  // Show drawing button
+  const showImg = document.querySelector('.show__img')
+
   // Select the indicators
   const mobileIndicators = document.querySelectorAll('.mobile__buttons');
   const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
@@ -35,8 +38,15 @@
         desktopIndicator.style.display = "none"
       })
       // Remove content from tutorial navigation when mobile
-      back.textContent = ""
-      tip.textContent = ""
+    
+      if(back && tip){
+        back.textContent = ""
+        tip.textContent = ""
+        }
+      if(showImg) {
+        // Remove the button
+        showImg.style.display = "initial"
+        }
     }else {
       // Set for desktop
       mobileIndicators.forEach(mobileIndicator => {
@@ -49,6 +59,11 @@
       if(back && tip){
       back.textContent = "Verlaat de tutorial"
       tip.textContent = "Vraag tips"
+      }
+
+      if(showImg) {
+      // Remove the button
+      showImg.style.display = "none"
       }
     
     }
@@ -147,10 +162,11 @@ const stepImg = document.querySelector('.step__right--img');
   
       // Selectors
       const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.","Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.","Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.","Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ","Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
-    
+      const buttonText = ["Body", "Aandrijving", "Wielen", "Creativiteit", "Afronden"]
       // Get all the tutorial buttons
       tutorialButton.forEach(button => {
-      button.setAttribute("id", `btnStep${stepIndex}` )
+      button.setAttribute("id", `btnStep${stepIndex}` );
+      button.textContent = buttonText[stepIndex];
       stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg` )
       stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/image.svg`)
       stepText.textContent = text[stepIndex];

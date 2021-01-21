@@ -114,7 +114,12 @@ justify-content: center;
     background-color: white;
     z-index: -5;
     position: absolute;
+    display: grid;
+    grid-template-rows: 5rem 1fr 5rem;
 } 
+
+.step {
+}
 
 .steps__menu--items {
     display: flex;
@@ -123,6 +128,8 @@ justify-content: center;
     justify-content: space-between;
     width: 95%;
     margin: 0 auto;
+    margin-top: 1rem;
+
 }
 
 .steps__menu--item {
@@ -139,36 +146,45 @@ justify-content: center;
     display: block;
     content: ' ';
     background-image: url('/assets/img/tutorial/back.svg');
-    background-size: 28px 28px;
-    height: 28px;
-    width: 28px;
-    margin: .8rem;
+    background-size: 4rem 4rem;
+    height: 4rem;
+    width: 4rem;
+
 }
 
 .tip::after {
     display: block;
     content: ' ';
     background-image: url('/assets/img/tutorial/tip.svg');
-    background-size: 28px 28px;
-    height: 28px;
-    width: 28px;
-    margin: .8rem;
+    background-size: 4rem 4rem;
+    height: 4rem;
+    width: 4rem;
+
 }
 
 .step__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 .step {
 }
 
+.step__intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .step__left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .step__title {
@@ -181,12 +197,34 @@ justify-content: center;
     margin-right: .5rem;
     font-size: var(--fontRegular);
     font-weight: var(--fontWeightLight);
-    line-height: var(--spacerBig);
+    line-height: 2.5rem;
     max-width: 60rem;
+    text-align: center;
+}
+
+.step__button--wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .tutorial__button {
     margin-top: 1rem;
+}
+
+.show__img--button {
+    margin-top: 2rem;
+    border: .2rem solid var(--colorSecondary);
+    background-color: transparent;
+    font-family: var(--font);
+    color: var(--colorText);
+    border-radius: 5px;
+    height: 5rem;
+    width: 25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: var(--fontRegular);
+    cursor: pointer;
 }
 
 .step__right {
@@ -203,7 +241,6 @@ justify-content: center;
     justify-content: space-evenly;
     max-width: 70rem;
     margin: 0 auto;
-    margin-top: 8rem;
 }
 
 .mobile__buttons {
@@ -229,6 +266,7 @@ justify-content: center;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 1rem;
 }
 
 .step__indicator--number {
@@ -314,6 +352,7 @@ justify-content: center;
     background-color: transparent;
     border: .2rem solid var(--colorSecondary);
     color: var(--colorText);
+    width: 95%;
 }
 
 .tutorial__button {

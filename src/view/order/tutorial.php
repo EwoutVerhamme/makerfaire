@@ -96,53 +96,57 @@
     <section class="step">
         <div class="step__wrapper">
             <div class="step__left">
-                <img src="" alt="" class="step__title">
-                <p class="step__subtext">
-
-                </p>
-                <button id="btnStep0" class="button tutorial__button">Volgende</button>
+                <div class="step__intro">
+                    <img src="" alt="" class="step__title">
+                    <p class="step__subtext"> </p>
+                </div>
+                <div class="step__button--wrapper">
+                    <button id="btnStepImg0" class="show__img--button">Toon
+                        tekening</button>
+                    <button id="btnStep0" class="button tutorial__button">De body</button>
+                </div>
             </div>
             <div class="step__right">
                 <img src="" alt="" class="step__right--img">
             </div>
         </div>
-        <div class="step__indicators">
-            <div id="0" class="step__indicator ">
-                <div class="mobile__buttons indicatorMobile0"></div>
-                <div class="step__indicator--wrapper">
-                    <p class="step__indicator--number indicator0">1</p>
-                    <p class="step__indicator--text">schets</p>
-                </div>
-            </div>
-            <div id="1" class="step__indicator">
-                <div class="mobile__buttons indicatorMobile1"></div>
-                <div class="step__indicator--wrapper">
-                    <p class="step__indicator--number indicator1">2</p>
-                    <p class="step__indicator--text">body
-                    </p>
-                </div>
-            </div>
-            <div id="2" class="step__indicator">
-                <div class="mobile__buttons indicatorMobile2"></div>
-                <div class="step__indicator--wrapper">
-                    <p class="step__indicator--number indicator2">3</p>
-                    <p class="step__indicator--text">aandrijving</p>
-                </div>
-            </div>
-            <div id="3" class="step__indicator">
-                <div class="mobile__buttons indicatorMobile3"></div>
-                <div class="step__indicator--wrapper">
-                    <p class="step__indicator--number indicator3">4</p>
-                    <p class="step__indicator--text">wielen</p>
-                </div>
-            </div>
-            <div id="4" class="step__indicator">
-                <div class="mobile__buttons indicatorMobile4"></div>
-                <div class="step__indicator--wrapper">
-                    <p class="step__indicator--number indicator4">5</p>
-                    <p class="step__indicator--text">creativiteit</p>
-                </div>
+    </section>
+    <div class="step__indicators">
+        <div id="0" class="step__indicator ">
+            <div class="mobile__buttons indicatorMobile0"></div>
+            <div class="step__indicator--wrapper">
+                <p class="step__indicator--number indicator0">1</p>
+                <p class="step__indicator--text">schets</p>
             </div>
         </div>
-    </section>
+        <div id="1" class="step__indicator">
+            <div class="mobile__buttons indicatorMobile1"></div>
+            <div class="step__indicator--wrapper">
+                <p class="step__indicator--number indicator1">2</p>
+                <p class="step__indicator--text">body
+                </p>
+            </div>
+        </div>
+        <div id="2" class="step__indicator">
+            <div class="mobile__buttons indicatorMobile2"></div>
+            <div class="step__indicator--wrapper">
+                <p class="step__indicator--number indicator2">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+        </div>
+        <div id="3" class="step__indicator">
+            <div class="mobile__buttons indicatorMobile3"></div>
+            <div class="step__indicator--wrapper">
+                <p class="step__indicator--number indicator3">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+        </div>
+        <div id="4" class="step__indicator">
+            <div class="mobile__buttons indicatorMobile4"></div>
+            <div class="step__indicator--wrapper">
+                <p class="step__indicator--number indicator4">5</p>
+                <p class="step__indicator--text">creativiteit</p>
+            </div>
+        </div>
+    </div>
 </div>
