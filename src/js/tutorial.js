@@ -151,6 +151,7 @@ const stepImg = document.querySelector('.step__right--img');
   });
 
     const renderStep = (stepIndex) => {
+      
       updateIndicators(stepIndex)
       // Always set the popups and header to none
       if(popup){
@@ -159,6 +160,7 @@ const stepImg = document.querySelector('.step__right--img');
         // Always set the steps to view
         stepsWrapper.style.zIndex = "2"
         stepsWrapper.classList.remove('hidden');
+        stepsWrapper.style.display = "grid";
       }
   
       // Selectors
