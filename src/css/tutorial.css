@@ -192,6 +192,7 @@ justify-content: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 10rem;
 }
 
 .step__indicator--number {
@@ -200,6 +201,8 @@ justify-content: center;
     color: var(--colorText);
     height: 5rem;
     width: 5rem;
+    border-radius: 50%;
+    border: .3rem solid var(--colorAccent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,6 +232,7 @@ justify-content: center;
         position: absolute;
         display: flex;
         flex-direction: column;
+        margin-left: 4rem;
     }
 
 
