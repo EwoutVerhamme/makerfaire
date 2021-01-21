@@ -7,10 +7,10 @@
             <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
             <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
             </li>
-            <div class="language">
+            <ul class="language">
                 <li><a class="language__text active" href="#">NL</a></li>
                 <li><a class="language__text" href="#">/ FR</a></li>
-            </div>
+            </ul>
 
         </ul>
     </div>
@@ -30,10 +30,10 @@
                         <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                         <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
                         </li>
-                        <div class="language">
+                        <ul class="language">
                             <li><a class="language__text active" href="#">NL</a></li>
                             <li><a class="language__text" href="#">/ FR</a></li>
-                        </div>
+                        </ul>
                     </ul>
                 </div>
             </div>

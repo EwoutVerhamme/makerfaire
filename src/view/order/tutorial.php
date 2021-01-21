@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<header class="header hidden">
+<header class="header">
     <nav class=" nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
@@ -28,10 +28,10 @@
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
-                <div class="language">
+                <ul class="language">
                     <li><a class="language__text active" href="#">NL</a></li>
                     <li><a class="language__text" href="#">/ FR</a></li>
-                </div>
+                </ul>
 
             </ul>
         </div>
@@ -52,10 +52,10 @@
                                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                                 <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
                                 </li>
-                                <div class="language">
+                                <ul class="language">
                                     <li><a class="language__text active" href="#">NL</a></li>
                                     <li><a class="language__text" href="#">/ FR</a></li>
-                                </div>
+                                </ul>
                             </ul>
                         </div>
                     </div>
@@ -85,14 +85,14 @@
     </div>
 </header>
 
-<div class="steps__wrapper ">
+<div class="steps__wrapper hidden ">
     <nav class="steps__menu">
         <ul class="steps__menu--items">
             <li><a class="steps__menu--item back" href="index.php?page=tutorial">Verlaat de tutorial</a></li>
             <li class="steps__menu--item tip">Vraag tips</li>
         </ul>
     </nav>
-    <section class="step step__1 ">
+    <section class="step step__1 hidden ">
         <div class="step__wrapper">
             <div class="step__left">
                 <img src="../../assets/img/tutorial/step1/title.svg" alt="" class="step__title">
@@ -108,25 +108,178 @@
             </div>
         </div>
         <div class="step__indicators">
+            <div class="step__indicator ">
+                <p class="step__indicator--number step__indicator--active ">1</p>
+                <p class="step__indicator--text">schets</p>
+            </div>
             <div class="step__indicator">
-                <p class="step__indicator--number">1</p>
-                <p class="step__indicator--text">Schets</p>
+                <p class="step__indicator--number">2</p>
+                <p class="step__indicator--text">body</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">5</p>
+                <p class="step__indicator--text">creativiteit</p>
             </div>
         </div>
     </section>
 
     <section class=" step__2 hidden">
-        <h1 style="font-size: 3rem">Stap 2</h1>
-        <button id="2" class="button tutorial__button">Volgende</button>
+        <div class="step__wrapper">
+            <div class="step__left">
+                <img src="../../assets/img/tutorial/step2/title.svg" alt="" class="step__title">
+                <p class="step__subtext">
+                    Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles
+                    stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een
+                    stootje kan. </p>
+                <button id="1" class="button tutorial__button">Volgende</button>
+            </div>
+            <div class="step__right">
+                <img src="../../assets/img/tutorial/step2/image.svg" alt="" class="step__right--img">
+            </div>
+        </div>
+        <div class="step__indicators">
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">1</p>
+                <p class="step__indicator--text">schets</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">2</p>
+                <p class="step__indicator--text">body</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">5</p>
+                <p class="step__indicator--text">creativiteit</p>
+            </div>
+        </div>
     </section>
 
     <section class=" step__3 hidden">
-        <h1 style="font-size: 3rem">Stap 3</h1>
-        <button id="3" class="button tutorial__button">Volgende</button>
+        <div class="step__wrapper">
+            <div class="step__left">
+                <img src="../../assets/img/tutorial/step3/title.svg" alt="" class="step__title">
+                <p class="step__subtext">
+                    Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn.
+                    Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste
+                    aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.
+                </p>
+                <button id="1" class="button tutorial__button">Volgende</button>
+            </div>
+            <div class="step__right">
+                <img src="../../assets/img/tutorial/step3/image.svg" alt="" class="step__right--img">
+            </div>
+        </div>
+        <div class="step__indicators">
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">1</p>
+                <p class="step__indicator--text">schets</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">2</p>
+                <p class="step__indicator--text">body</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">5</p>
+                <p class="step__indicator--text">creativiteit</p>
+            </div>
+        </div>
     </section>
 
     <section class=" step__4 hidden">
-        <h1 style="font-size: 3rem">Stap 4</h1>
-        <button id="4" class="button tutorial__button">Volgende</button>
+        <div class="step__wrapper">
+            <div class="step__left">
+                <img src="../../assets/img/tutorial/step4/title.svg" alt="" class="step__title">
+                <p class="step__subtext">
+                    Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de
+                    meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein
+                    mogelijk te houden. </p>
+                <button id="1" class="button tutorial__button">Volgende</button>
+            </div>
+            <div class="step__right">
+                <img src="../../assets/img/tutorial/step4/image.svg" alt="" class="step__right--img">
+            </div>
+        </div>
+        <div class="step__indicators">
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">1</p>
+                <p class="step__indicator--text">schets</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">2</p>
+                <p class="step__indicator--text">body</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number">5</p>
+                <p class="step__indicator--text">creativiteit</p>
+            </div>
+        </div>
+    </section>
+    <section class=" step__5 hidden">
+        <div class="step__wrapper">
+            <div class="step__left">
+                <img src="../../assets/img/tutorial/step5/title.svg" alt="" class="step__title">
+                <p class="step__subtext">
+                    Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek
+                    naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid
+                    verliest! </p>
+                <button id="1" class="button tutorial__button">Volgende</button>
+            </div>
+            <div class="step__right">
+                <img src="../../assets/img/tutorial/step4/image.svg" alt="" class="step__right--img">
+            </div>
+        </div>
+        <div class="step__indicators">
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">1</p>
+                <p class="step__indicator--text">schets</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">2</p>
+                <p class="step__indicator--text">body</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">3</p>
+                <p class="step__indicator--text">aandrijving</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">4</p>
+                <p class="step__indicator--text">wielen</p>
+            </div>
+            <div class="step__indicator">
+                <p class="step__indicator--number step__indicator--active ">5</p>
+                <p class="step__indicator--text">creativiteit</p>
+            </div>
+        </div>
     </section>
 </div>

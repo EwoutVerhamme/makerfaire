@@ -22,12 +22,6 @@
   const step4 = document.querySelector('.step__4');
   const back = document.querySelector('.back');
 
-  // REMOVE YOUR CURRENT STEP FROM LOCALSTORAGE WHEN LEAVING
-  if(back) {
-    back.addEventListener('click', () => {
-      localStorage.removeItem('step')
-    })
-  }
   
   // BEGIN TUTORIAL CODE
   tutorialButton.forEach(button => {
@@ -73,17 +67,14 @@
         case "1":
           step1.classList.add("hidden");
           step2.classList.remove('hidden');
-          localStorage.setItem('step', 2);
           break;
           case "2":
             step2.classList.add("hidden");
             step3.classList.remove('hidden');
-            localStorage.setItem('step', 3);
           break;
           case "3":
             step3.classList.add("hidden");
             step4.classList.remove('hidden');
-              localStorage.setItem('step', 4);
           break;
         default:
           console.log("Error")

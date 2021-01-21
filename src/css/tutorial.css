@@ -157,10 +157,67 @@ justify-content: center;
 }
 
 .step__wrapper {
-    margin-top: 4rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-around
+}
+
+.step__left {
+    height: 100%;
+}
+
+.step__subtext {
+    margin-top: 3rem;
+    font-size: var(--fontRegular);
+    font-weight: var(--fontWeightLight);
+    line-height: var(--spacerBig);
+    max-width: 60rem;
+}
+
+.tutorial__button {
+    margin-top: 5rem;
+}
+
+.step__indicators {
+    display: flex;
     justify-content: space-evenly;
+    width: 60rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
+.step__indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step__indicator--number {
+    font-size: var(--fontBig);
+    margin: .5rem;
+    color: var(--colorText);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step__indicator--active {
+    color: white;
+    background-color: var(--colorAccent);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.step__indicator--text {
+    font-size: var(--fontRegular);
 }
 /* END OF TUTORIAL STEP STYLING */
 
