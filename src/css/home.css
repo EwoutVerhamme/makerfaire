@@ -51,13 +51,13 @@
 }
 
 .a__button {
-    margin-top: 2rem;
+    margin-top: 3rem;
     background-color: var(--colorSecondary);
     border: none;
     font-family: var(--font);
     color: white;
     border-radius: 5px;
-    height: 6rem;
+    height: 5rem;
     width: fit-content;
     padding-left: 2rem;
     padding-right: 2rem;

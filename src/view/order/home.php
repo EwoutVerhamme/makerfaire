@@ -6,7 +6,7 @@
             <ul class="menu__items">
                 <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
-                <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
+                <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
                 <ul class="language">
                     <li><a class="language__text active" href="#">NL</a></li>
@@ -30,7 +30,7 @@
                             <ul>
                                 <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
-                                <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
+                                <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                                 </li>
                                 <ul class="language">
                                     <li><a class="language__text active" href="#">NL</a></li>

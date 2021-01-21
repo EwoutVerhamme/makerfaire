@@ -96,10 +96,6 @@ const stepImg = document.querySelector('.step__right--img');
             // Set step 5
             renderStep(4)
           break;
-          case "btnStep4":
-            // Set step 5
-            renderStep(5)
-          break;
         default:
           console.log("ErrorButtonTutorial")
       }

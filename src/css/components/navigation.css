@@ -191,14 +191,19 @@
   transition: .2s ease-in-out;
 }
 
-.highlight {
+.menu__item--highlight {
   background-color: var(--colorSecondary);
   color: white;
   border-radius: 5px;
   height: 4rem;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  font-size: var(--fontRegular);
+  font-weight: var(--fontWeightLight);
+  padding: 2rem;
   text-decoration: none;
 }
 @media only screen and (min-width: 678px) {
@@ -234,6 +239,11 @@
     text-decoration: none;
     color: var(--colorText);
   }
+
+  .active {
+    color: var(--colorMain);
+    font-weight: var(--fontWeightBold);
+  }
   
   .menu__item:hover {
     color: var(--colorMain);
@@ -248,8 +258,17 @@
   .language__text {
     color: var(--colorText);
   }
+}
 
+@media only screen and (min-width: 740px){
+  .nav__big--logo {
+    margin-left: 2rem;
+    padding-bottom: 1.2rem;
+    height: 4.5rem;
+  }
 
 }
+
+
 
 
