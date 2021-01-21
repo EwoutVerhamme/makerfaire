@@ -1,7 +1,8 @@
 <header class="header">
-    <nav class="nav">
+    <nav class="nav__big">
         <div class="menu">
-            <a class="menu__item" href="index.php"><img src="../../assets/img/home/logo_nav.svg"></a>
+            <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
+                    ../../assets/img/home/logo_nav.svg"></a>
             <ul class="menu__items">
                 <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
@@ -15,6 +16,35 @@
             </ul>
         </div>
     </nav>
+    <nav class="nav__wrapper">
+        <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
+                    ../../assets/img/home/logo_nav.svg"></a>
+        <div class="nav">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <a class="menu__item" href="index.php"><img class="nav__logo"
+                                src="../../assets/img/home/logo_nav.svg"></a>
+                        <ul>
+                            <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
+                            <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
+                            <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
+                            </li>
+                            <div class="language">
+                                <li><a class="language__text active" href="#">NL</a></li>
+                                <li><a class="language__text" href="#">/ FR</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="header__info">
         <h1 class="header__title">Maak jij de snelste drag-racewagen?</h1>
         <p class="header__subtext subtext">
@@ -48,18 +78,19 @@
 
     <div class="numbers">
         <div class="number__box">
-            <p class="number__text">20.403</p>
+            <p class="number__text visitors count">
+            </p>
             <p class="number__name">Bezoekers</p>
         </div>
-        <div class="number__box">
+        <div class="number__box volunteers">
             <p class="number__text">94</p>
             <p class="number__name">Vrijwilligers</p>
         </div>
-        <div class="number__box">
+        <div class="number__box makers">
             <p class="number__text">1.034</p>
             <p class="number__name">Makers</p>
         </div>
-        <div class="number__box">
+        <div class="number__box experiments">
             <p class="number__text">103</p>
             <p class="number__name">Experimenten</p>
         </div>

@@ -19,7 +19,7 @@ class Controller {
     // NEW : CSS
     $this->set('css', ''); // webpack dev server: css is injected by the script
     if ($this->env == 'production') {
-      $this->set('js', '<script src="script.js"></script>'); // regular script
+      $this->set('js', '<script  src="script.js"></script>'); // regular script
       $this->set('css', '<link href="style.css" rel="stylesheet">'); // regular css tag
     }
     $this->createViewVarWithContent();

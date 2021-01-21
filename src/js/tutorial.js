@@ -23,37 +23,10 @@
   const back = document.querySelector('.back');
 
   // REMOVE YOUR CURRENT STEP FROM LOCALSTORAGE WHEN LEAVING
-  back.addEventListener('click', () => {
-    localStorage.removeItem('step')
-  })
-
-  // CHECK YOUR LAST STEP OUT OF LOCALSTORAGE
-  if(localStorage.getItem("step")){
-    console.log(localStorage.getItem("step"))
-    switch(localStorage.getItem("step")) {
-      case 0:
-        header.style.filter =  "blur(8px)";
-        popup.style.zIndex = "5";
-        popup.style.animation = "fadein 2s"
-        break;
-        case 1:
-          step1.classList.add("hidden");
-          step2.classList.remove('hidden');
-          localStorage.setItem('step', 2);
-          break;
-          case 2:
-            step2.classList.add("hidden");
-            step3.classList.remove('hidden');
-            localStorage.setItem('step', 3);
-            break;
-            case 3:
-              step3.classList.add("hidden");
-              step4.classList.remove('hidden');
-                localStorage.setItem('step', 4);
-              break;
-      default:
-        // window.location = "index.php?page=tutorial";
-    }
+  if(back) {
+    back.addEventListener('click', () => {
+      localStorage.removeItem('step')
+    })
   }
   
   // BEGIN TUTORIAL CODE

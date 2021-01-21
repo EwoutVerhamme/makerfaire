@@ -1,45 +1,157 @@
-.nav {
+.nav__wrapper {
   width: 100vw;
+  height: 6rem;
   position: fixed;
-}
-
-.menu {
-  grid-column: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.menu__items {
-  grid-column: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.menu__item {
-  font-size: var(--fontRegular);
-  font-weight: var(--fontWeightLight);
-  padding: 2rem;
-  text-decoration: none;
-  color: var(--colorText);
+.nav__big {
+  display: none;
 }
 
-.nav__img {
-  margin-left: 2rem;
-  padding-bottom: 1.2rem;
+.nav .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
 }
 
-.highlight {
-  background-color: var(--colorSecondary);
-  color: white;
-  border-radius: 5px;
-  height: 4rem;
+.nav .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
 }
+
+/* Hamburger Line */
+.nav .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: var(--colorText);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.nav .hamburger > div::before,
+.nav .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.nav .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.nav .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.nav .toggler:checked + .hamburger > div:before,
+.nav .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.nav .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.nav .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.nav .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.nav .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.nav .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .menu > div {
+  background:rgba(24, 39, 51 , 0.85);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.nav .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.nav .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.nav .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+
 
 .language {
   display: flex;
@@ -53,6 +165,10 @@
   font-weight: var(--fontWeightLight);
   text-decoration: none;
   color: var(--colorText);
+}
+
+.language__text:hover {
+  color: var(--colorMain);
 }
 
 .active {
@@ -69,3 +185,63 @@
   background-color:transparent;
   transition: .2s ease-in-out;
 }
+
+@media only screen and (min-width: 678px) {
+  .nav__big {
+    display: block;
+    width: 100vw;
+    position: fixed;
+  }
+
+  .nav__wrapper  {
+    display: none;
+  }
+  
+  .menu {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .menu__items {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu__item {
+    font-size: var(--fontRegular);
+    font-weight: var(--fontWeightLight);
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--colorText);
+  }
+  
+  .menu__item:hover {
+    color: var(--colorMain);
+  }
+  
+  .nav__big--logo {
+    margin-left: 2rem;
+    padding-bottom: 1.2rem;
+    height: 3.5rem;
+  }
+  
+  .highlight {
+    background-color: var(--colorSecondary);
+    color: white;
+    border-radius: 5px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+
+}
+
+

@@ -50,6 +50,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "countup.js": "^2.0.7",
     "lottie-web": "^5.7.6"
   }
 }
