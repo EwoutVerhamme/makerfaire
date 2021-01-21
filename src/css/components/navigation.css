@@ -205,7 +205,13 @@
   font-weight: var(--fontWeightLight);
   padding: 2rem;
   text-decoration: none;
+  transition: .2s ease-in-out;
 }
+
+.menu__item--highlight:hover{
+  background-color: #00aab6;
+}
+
 @media only screen and (min-width: 678px) {
   .nav__big {
     display: block;

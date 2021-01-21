@@ -22,6 +22,31 @@
   const stepsWrapper = document.querySelector('.steps__wrapper')
   const back = document.querySelector('.back');
 
+  // Select the indicators
+  const mobileIndicators = document.querySelectorAll('.mobile__buttons');
+  const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
+
+
+  // Get the device width to set the settings and behaviours
+  const checkWindowSize = () => {
+    window.addEventListener('resize', checkWindowSize)
+    if(window.innerWidth < 678){
+      mobileIndicators.forEach(mobileIndicator => {
+        mobileIndicator.style.display = "flex"
+      })
+      desktopIndicators.forEach(desktopIndicator => {
+        desktopIndicator.style.display = "none"
+      })
+    }else {
+      mobileIndicators.forEach(mobileIndicator => {
+        mobileIndicator.style.display = "none"
+      })
+      desktopIndicators.forEach(desktopIndicator => {
+        desktopIndicator.style.display = "flex"
+      })
+    }
+  }
+
   // BEGIN TUTORIAL CODE
   tutorialIntroButton.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -129,12 +154,32 @@ const stepImg = document.querySelector('.step__right--img');
   
       // Set all the indicators colored
       for(let i = 0; i <= stepIndex; i++){
-        // Set all the passed indicators to passed
         const indicatorActive = document.querySelector(`.indicator${i}`)
-        indicatorActive.classList.add("step__indicator--active");
+        const indicatorActiveMobile = document.querySelector(`.indicatorMobile${i}`)
+        // Set all the passed indicators to passed
+        
+          indicatorActiveMobile.classList.add("step__indicator--activemobile");
+          indicatorActive.classList.add("step__indicator--active");
+        
       }
       });      
     }
+
+    // Make the step indicators clickable 
+    const indicators = document.querySelectorAll('.step__indicator');
+
+    indicators.forEach(indicator => {
+    indicator.addEventListener('click', (e) => {
+      // Get the id of the indicator
+      if(window.innerWidth < 678){
+        const stepIndex = e.path[1].id;
+        renderStep(stepIndex)
+      }else {
+        const stepIndex = e.path[2].id;
+        renderStep(stepIndex)
+      }
+    })     
+    });
   
   
 
@@ -145,6 +190,9 @@ const stepImg = document.querySelector('.step__right--img');
         // Get the saved step 
         renderStep(stepIndex)
       }
+
+      // Check the windowsize to change the indicators
+      checkWindowSize()
   }
 
   // Check if back exists to prevent error in console
