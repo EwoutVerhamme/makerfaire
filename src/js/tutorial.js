@@ -1,14 +1,10 @@
 {
-
-  let stepIndex = undefined;
-
     // Selectors
-  const navigation = document.querySelector('.nav');
   const tutorialIntroButton = document.querySelectorAll('.intro__tutorial--button');
   const tutorialButton = document.querySelectorAll('.tutorial__button')
   const header = document.querySelector('.header')
   
-  // SELECT THE POPUP TO CHANCE HTML
+  // Select popup items to chang their content
   const popup = document.querySelector('.popup__wrapper');
   const popupTitle = document.querySelector('.popup__title');
   const popupSubtext = document.querySelector('.popup__subtext');
@@ -18,7 +14,7 @@
   const handtrack = document.querySelector('.handtrack');
   const noHandTrack = document.querySelector('.nohandtrack');
   
-  // SELECT ALL THE STEPS
+  // Select all the steps
   const stepsWrapper = document.querySelector('.steps__wrapper')
   const back = document.querySelector('.back');
   const tip = document.querySelector('.tip')
@@ -26,37 +22,39 @@
   // Select the indicators
   const mobileIndicators = document.querySelectorAll('.mobile__buttons');
   const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
-  const stepsMenuItems = document.querySelectorAll('.steps__menu--item');
-
 
   // Get the device width to set the settings and behaviours
   const checkWindowSize = () => {
     window.addEventListener('resize', checkWindowSize)
-    if(window.innerWidth < 678 && mobileIndicators){
+    if(window.innerWidth < 678 && mobileIndicators && desktopIndicators){
+      // Chance between mobile and desktop indicators
       mobileIndicators.forEach(mobileIndicator => {
         mobileIndicator.style.display = "flex"
       })
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "none"
       })
+      // Remove content from tutorial navigation when mobile
       back.textContent = ""
       tip.textContent = ""
     }else {
+      // Set for desktop
       mobileIndicators.forEach(mobileIndicator => {
         mobileIndicator.style.display = "none"
       })
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "flex"
       })
+      // Check if back & tip exists, otherwise i got error in homepage
       if(back && tip){
-          back.textContent = "Verlaat de tutorial"
+      back.textContent = "Verlaat de tutorial"
       tip.textContent = "Vraag tips"
       }
     
     }
   }
 
-  // BEGIN TUTORIAL CODE
+  // Tutorial logic
   tutorialIntroButton.forEach(button => {
     button.addEventListener('click', (e) => {
       switch(e.target.id) {
@@ -110,7 +108,7 @@ const stepTitle = document.querySelector('.step__title');
 const stepText = document.querySelector('.step__subtext');
 const stepImg = document.querySelector('.step__right--img');
 
-// Get over all the buttons
+// Get over all the buttons in the steps
   tutorialButton.forEach(button => {
     button.addEventListener('click', (e) => {
       switch(e.target.id) {
@@ -202,14 +200,13 @@ const stepImg = document.querySelector('.step__right--img');
   
 
   const init = () => {
-    // Set the previous step after refresh
       if(localStorage.getItem("step")){
         const stepIndex = localStorage.getItem("step")
         // Get the saved step 
         renderStep(stepIndex)
       }
 
-      // Check the windowsize to change the indicators
+      // Check the windowsize on init
       checkWindowSize()
   }
 
