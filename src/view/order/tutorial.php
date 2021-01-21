@@ -18,8 +18,8 @@
     </div>
 </div>
 
-<header class="header">
-    <nav class="nav__big">
+<header class="header hidden">
+    <nav class=" nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg"></a>
@@ -85,29 +85,47 @@
     </div>
 </header>
 
-<div class="steps__wrapper hidden">
+<div class="steps__wrapper ">
     <nav class="steps__menu">
         <ul class="steps__menu--items">
             <li><a class="steps__menu--item back" href="index.php?page=tutorial">Verlaat de tutorial</a></li>
             <li class="steps__menu--item tip">Vraag tips</li>
         </ul>
     </nav>
-    <section class="step step__1 hidden">
-        <h1 style="font-size: 3rem">Stap 1</h1>
-        <button id="1" class="button tutorial__button">Volgende</button>
+    <section class="step step__1 ">
+        <div class="step__wrapper">
+            <div class="step__left">
+                <img src="../../assets/img/tutorial/step1/title.svg" alt="" class="step__title">
+                <p class="step__subtext">
+                    Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je
+                    nodig
+                    hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.
+                </p>
+                <button id="1" class="button tutorial__button">Volgende</button>
+            </div>
+            <div class="step__right">
+                <img src="../../assets/img/tutorial/step1/image.svg" alt="" class="step__right--img">
+            </div>
+        </div>
+        <div class="step__indicators">
+            <div class="step__indicator">
+                <p class="step__indicator--number">1</p>
+                <p class="step__indicator--text">Schets</p>
+            </div>
+        </div>
     </section>
 
-    <section class="step step__2 hidden">
+    <section class=" step__2 hidden">
         <h1 style="font-size: 3rem">Stap 2</h1>
         <button id="2" class="button tutorial__button">Volgende</button>
     </section>
 
-    <section class="step step__3 hidden">
+    <section class=" step__3 hidden">
         <h1 style="font-size: 3rem">Stap 3</h1>
         <button id="3" class="button tutorial__button">Volgende</button>
     </section>
 
-    <section class="step step__4 hidden">
+    <section class=" step__4 hidden">
         <h1 style="font-size: 3rem">Stap 4</h1>
         <button id="4" class="button tutorial__button">Volgende</button>
     </section>

@@ -1,6 +1,3 @@
-
-
-
   // Selectors
 const navSmall = document.querySelector('.nav__wrapper');
 const navBig = document.querySelector('.nav__big');
@@ -8,7 +5,6 @@ const visitors = document.querySelector('.visitors');
 const volunteers = document.querySelector('.volunteers');
 const makers = document.querySelector('.makers');
 const experiments = document.querySelector('.experiments');
-
 
 
 const init =  () => {

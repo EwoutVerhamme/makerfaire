@@ -156,7 +156,12 @@ justify-content: center;
     margin: .8rem;
 }
 
-
+.step__wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 /* END OF TUTORIAL STEP STYLING */
 
 

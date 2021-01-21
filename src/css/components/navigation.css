@@ -201,7 +201,6 @@
   justify-content: center;
   text-decoration: none;
 }
-
 @media only screen and (min-width: 678px) {
   .nav__big {
     display: block;
