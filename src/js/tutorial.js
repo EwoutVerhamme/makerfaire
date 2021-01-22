@@ -39,11 +39,6 @@
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "none"
       })
-
-      showImgButton.addEventListener('click', () => {
-        const stepImg = document.querySelector('.step__right--img')
-        stepImg.style.display === "none" ? stepImg.style.display = "block" : stepImg.style.display = "none"
-      })
     } else {
       // Set for desktop
       mobileIndicators.forEach(mobileIndicator => {
@@ -148,7 +143,12 @@ const stepImg = document.querySelector('.step__right--img');
       button.setAttribute("id", `btnStep${stepIndex}` );
       button.textContent = buttonText[stepIndex];
       stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg` )
-      stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/image.svg`)
+      if(window.innerWidth < window.innerHeight && window.innerHeight > 768 ){
+        stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
+        stepImg.style.display = "flex"
+      } else {
+        stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/image.svg`)
+      }
       stepText.textContent = text[stepIndex];
       localStorage.setItem('step', stepIndex);
       updateIndicators(stepIndex) 
@@ -156,7 +156,7 @@ const stepImg = document.querySelector('.step__right--img');
     }
 
     const updateIndicators = (stepIndex) => {
-    // Set all the indicators colored
+      // Set all the indicators colored
     for(let i = 0; i <= stepIndex; i++){
       const indicatorActive = document.querySelector(`.indicator${i}`)
       const indicatorActiveMobile = document.querySelector(`.indicatorMobile${i}`)
@@ -200,11 +200,15 @@ const stepImg = document.querySelector('.step__right--img');
         // Get the saved step 
         renderStep(stepIndex)
       }
-
       // Check the windowsize on init
       checkWindowSize()
-  }
 
+      if(showImgButton){
+        showImgButton.addEventListener('click', () => {
+          stepImg.style.display === "block" ? stepImg.style.display = "none" : stepImg.style.display = "block"
+        })
+      }
+  }
   // Check if back exists to prevent error in console
   if(back){
     back.addEventListener('click', () => {

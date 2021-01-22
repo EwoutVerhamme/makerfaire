@@ -199,7 +199,6 @@ justify-content: center;
 }
 
 .step__right--img {
-    width: 3rem;
     display: none;
 }
 
@@ -315,5 +314,38 @@ justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
+
+.step__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.step__button--wrapper {
+    margin-top: 2rem;
+}
+
+.step__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.step__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.step__indicators {
+    margin-bottom: 4rem;
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
 
 }

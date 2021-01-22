@@ -7,8 +7,7 @@
     color: white;
     border-radius: 5px;
     height: 5rem;
-    min-width: 30rem;
-    max-width: 50rem;
+    width: 22rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-size: var(--fontRegular);
@@ -23,8 +22,7 @@
     font-family: var(--font);
     border-radius: 5px;
     height: 5rem;
-    min-width: 30rem;
-    max-width: 50rem;
+    width: 22rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-size: var(--fontRegular);
@@ -40,8 +38,7 @@
     color: white;
     border-radius: 5px;
     height: 5rem;
-    min-width: 30rem;
-    max-width: 50rem;
+    width: 22rem;
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: var(--fontMedium);
@@ -50,22 +47,4 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
-}
-
-@media only screen and (min-width: 678px) {
-    
-.button {
-    height: 5rem;
-    width: 20rem;
-}
-
-.button__outline {
-    height: 5rem;
-    width: 20rem;
-}
-
-.a__button {
-    height: 5rem;
-    width: fit-content;
-}
 }
