@@ -76,9 +76,6 @@ justify-content: center;
     align-items: center;
 }
 
-.tutorial__button {
-    width: 25rem;
-}
 
 .handtrack {
     display: none;
@@ -111,11 +108,8 @@ justify-content: center;
     z-index: -5;
     position: absolute;
     display: none;
-    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-rows: 5rem 1fr 8rem;
 } 
-
-.step {
-}
 
 .steps__menu--items {
     display: flex;
@@ -129,7 +123,7 @@ justify-content: center;
 }
 
 .steps__menu--item {
-    font-size: var(--fontRegular);
+    font-size: var(--fontMedium);
     font-weight: var(--fontWeightBold);
     display: flex;
     align-items: center;
@@ -138,6 +132,7 @@ justify-content: center;
     color: var(--colorMain);
 }
 
+
 .back::before {
     display: block;
     content: ' ';
@@ -145,7 +140,6 @@ justify-content: center;
     background-size: 4rem 4rem;
     height: 4rem;
     width: 4rem;
-
 }
 
 .tip::after {
@@ -155,7 +149,6 @@ justify-content: center;
     background-size: 4rem 4rem;
     height: 4rem;
     width: 4rem;
-
 }
 
 .step__wrapper {
@@ -163,9 +156,6 @@ justify-content: center;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-}
-
-.step {
 }
 
 .step__intro {
@@ -180,7 +170,7 @@ justify-content: center;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 90%;
 }
 
 .step__title {
@@ -208,22 +198,9 @@ justify-content: center;
     margin-top: 1rem;
 }
 
-.show__img--button {
-    margin-top: 2rem;
-    border: .2rem solid var(--colorSecondary);
-    background-color: transparent;
-    font-family: var(--font);
-    color: var(--colorText);
-    border-radius: 5px;
-    height: 5rem;
-    width: 25rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: var(--fontRegular);
-    cursor: pointer;
-}
 .step__right--img {
     width: 3rem;
+    display: none;
 }
 
 

@@ -107,7 +107,7 @@
                     <p class="step__subtext"> </p>
                 </div>
                 <div class="step__button--wrapper">
-                    <button id="btnStepImg0" class="show__img--button">Toon
+                    <button id="btnStepImg0" class="button__outline show__img--button">Toon
                         tekening</button>
                     <button id="btnStep0" class="button tutorial__button">De body</button>
                 </div>
