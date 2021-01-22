@@ -35,40 +35,6 @@
     justify-content: center;
 }
 
-.button {
-    margin-top: 2rem;
-    background-color: var(--colorSecondary);
-    border: none;
-    font-family: var(--font);
-    color: white;
-    border-radius: 5px;
-    height: 5rem;
-    width: fit-content;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: var(--fontRegular);
-    cursor: pointer;
-}
-
-.a__button {
-    margin-top: 3rem;
-    background-color: var(--colorSecondary);
-    border: none;
-    font-family: var(--font);
-    color: white;
-    border-radius: 5px;
-    height: 5rem;
-    width: fit-content;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: var(--fontMedium);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .span {
     font-weight: var(--fontWeightBold);
 }

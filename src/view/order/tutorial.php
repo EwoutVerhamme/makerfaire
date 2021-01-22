@@ -1,20 +1,26 @@
 <div class="popup__wrapper">
     <div class="popup">
         <div class="popup__info--wrapper">
-            <p class="popup__title">
-                Hebt u al het materiaal?
-            </p>
-            <p class="popup__subtext">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
+            <div class="popup__text">
+                <p class="popup__title">
+                    Hebt u al het materiaal?
+                </p>
+                <p class="popup__subtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+            </div>
             <div class="popup__buttons">
-                <button id="material" class="button popup__button intro__tutorial--button button1">Welk
+                <button id="material" class="button__outline intro__tutorial--button button1">Welk
                     materiaal?</button>
                 <button id="letsgo" class="button intro__tutorial--button button2">Ja, let's begin!</button>
             </div>
+
             <p class="handtrack">Handtracking laden...</p>
             <p class="nohandtrack"></p>
+
+
         </div>
     </div>
 </div>

@@ -190,8 +190,7 @@ const stepImg = document.querySelector('.step__right--img');
           indicatorActiveMobile.classList.remove("step__indicator--activemobile");
           indicatorActive.classList.remove("step__indicator--active");
      }else {
-       // Set all the passed indicators to passed
-       
+       // Set all the passed indicators to passed   
        indicatorActiveMobile.classList.add("step__indicator--activemobile");
        indicatorActive.classList.add("step__indicator--active");
      }
@@ -235,6 +234,7 @@ const stepImg = document.querySelector('.step__right--img');
       localStorage.removeItem('step')
       console.log(localStorage)
     })
+
   }
 init()
 }
