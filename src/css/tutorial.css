@@ -1,11 +1,17 @@
-.hidden{
-    display: none;
-}
+
 
 .indicators{
 display: flex;
 align-items: center;
 justify-content: center;
+
+
+@media (--only-regular-screen) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+}
 }
 
 .indicator {
@@ -14,7 +20,6 @@ justify-content: center;
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
-
 }
 
 .indicator__text {
@@ -45,12 +50,21 @@ justify-content: center;
     flex-direction: column;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+
+    @media (--only-regular-screen) {
+        height: 25rem;
+        width: 50rem;
+    }
 }
 
 .popup__info--wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @media (--only-regular-screen) {
+        height: 90%;
+    }
 }
 
 .popup__title {
@@ -66,6 +80,7 @@ justify-content: center;
     margin: 0 auto;
     margin-top: 1rem;
     width: 85%;
+
 }
 
 .popup__buttons {
@@ -74,6 +89,14 @@ justify-content: center;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media (--only-regular-screen) {
+        flex-direction: row;
+        width: 95%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 
 
@@ -157,6 +180,20 @@ justify-content: center;
     justify-content: space-evenly;
     height: 100%;
     margin: 0 auto;
+
+    @media (--only-regular-screen) {
+        justify-content: space-between;
+        height: 90%;
+    }
+
+    @media (--only-medium-screen) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        max-width: 130rem;
+    }
 }
 
 .step__intro {
@@ -164,6 +201,10 @@ justify-content: center;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    @media (--only-medium-screen) {
+        align-items: flex-start;
+        }
 }
 
 .step__left {
@@ -172,10 +213,24 @@ justify-content: center;
     justify-content: space-between;
     align-items: center;
     height: 90%;
+
+    @media (--only-regular-screen) {
+        justify-content: flex-start;
+    }
+
+    @media (--only-medium-screen) {
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 .step__title {
     width: 95%;
+
+    @media (--only-regular-screen) {
+        width: 55rem;
+        margin-left: 0;
+    }
 }
 
 .step__subtext {
@@ -187,12 +242,24 @@ justify-content: center;
     line-height: 2.5rem;
     max-width: 60rem;
     text-align: center;
+
+    @media (--only-medium-screen) {
+        text-align: left;
+        }
 }
 
 .step__button--wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @media (--only-regular-screen) {
+        margin-top: 2rem;
+    }
+
+    @media (--only-medium-screen) {
+        justify-content: flex-start;
+        }
 }
 
 .tutorial__button {
@@ -216,6 +283,22 @@ justify-content: center;
     padding-bottom: 5rem;
     width: 95%;
     margin: 0 auto;
+
+
+    @media (--only-medium-screen) {
+        margin: 0;
+        padding: 0;
+        display: block;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30rem;
+        }
+}
+
+.lottie__container {
+    width: 30rem;
 }
 
 .step__right--img {
@@ -229,6 +312,10 @@ justify-content: center;
     justify-content: space-evenly;
     max-width: 70rem;
     margin: 0 auto;
+
+    @media (--only-regular-screen) {
+        margin-bottom: 4rem;
+    }
 }
 
 .mobile__buttons {
@@ -292,124 +379,4 @@ justify-content: center;
 
 .step__indicator--text {
     font-size: var(--fontRegular);
-}
-/* END OF TUTORIAL STEP STYLING */
-
-
-
-@media only screen and (min-width: 678px) {
-
-.indicators{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin-left: 4rem;
-}
-
-.popup {
-    height: 25rem;
-    width: 50rem;
-}
-
-.popup__info--wrapper {
-    height: 90%;
-}
-
-.popup__title {
-    font-size: var(--fontMedium);
-    font-weight: var(--fontWeightAlt);
-    color: var(--colorMain);
-}
-
-.popup__subtext {
-    font-size: var(--fontSmall);
-    font-weight: var(--fontWeightRegular);
-    color: var(--colorText);
-    margin: 0 auto;
-    margin-top: 1rem;
-}
-
-.popup__buttons {
-    flex-direction: row;
-    width: 95%;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.step__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90%;
-}
-
-.step__button--wrapper {
-    margin-top: 2rem;
-}
-
-.step__left {
-    justify-content: flex-start;
-}
-
-.step__title {
-    width: 55rem;
-    margin-left: 0;
-}
-
-
-.step__indicators {
-    margin-bottom: 4rem;
-}
-
-}
-
-@media only screen and (min-width: 900px) {
-
-    .step__wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin: 0 auto;
-    max-width: 130rem;
-    }
-
-    .step__left {
-    justify-content: center;
-    align-items: flex-start;
-    }
-
-    .step__intro {
-        align-items: flex-start;
-    }
-
-    .step__subtext {
-        text-align: left;
-    }
-
-    .step__button--wrapper {
-        justify-content: flex-start;
-    }
-
-    .lottie__container {
-        width: 30rem;
-    }
-    
-    .step__right {
-    margin: 0;
-    padding: 0;
-    display: block;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 30rem;
-    }
-    
-    .step__right--img {
-    }
 }

@@ -3,11 +3,13 @@
 @import "./css/home.css";
 @import "./css/kit.css";
 @import "./css/tutorial.css";
+@import "./css/checkout.css";
 
 /* Components */
 @import "./css/components/navigation.css";
 @import "./css/components/footer.css";
 @import "./css/components/buttons.css";
+@import "./css/components/components.css";
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");

@@ -24,7 +24,21 @@ class OrderController extends Controller {
   }
 
   public function checkout() {
+
+    if(!empty($_POST['action'])){
+      if($_POST['action'] == 'insertOrder'){
+        $insertedOrder = $this->orderDAO->insertOrder($_POST);
+        if(!$insertedOrder){
+          $errors = $this->orderDAO->validate($_POST);
+          $this->set('errors',$errors);
+        }else{
+          $_SESSION['info'] = 'Bedankt voor je order';
+          header('Location:index.php');
+          exit();
+        }
+      }
     $this->set('title', 'Bestellen');
   }
 
+  }
 }

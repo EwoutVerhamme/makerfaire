@@ -1,3 +1,4 @@
+<div class="kit__wrapper">
 <nav class="nav__big">
     <div class="menu">
         <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
@@ -55,7 +56,10 @@
 
         <div class="kit__button--wrapper">
             <button class="button__outline">Pakket bekijken</button>
-            <button class="button">Bestellen</button>
+            <a href="index.php?page=checkout" class="a__button">Bestellen</a>
         </div>
     </div>
 </section>
+
+
+</div>

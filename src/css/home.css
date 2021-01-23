@@ -35,10 +35,6 @@
     justify-content: center;
 }
 
-.span {
-    font-weight: var(--fontWeightBold);
-}
-
 .spacer {
     height: 3rem;
 }

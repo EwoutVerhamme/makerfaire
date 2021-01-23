@@ -31,7 +31,7 @@
 }
 
 .a__button {
-    margin-top: 3rem;
+    margin-top: 1rem;
     background-color: var(--colorSecondary);
     border: none;
     font-family: var(--font);

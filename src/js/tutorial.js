@@ -154,7 +154,7 @@ const stepImg = document.querySelector('.step__right--img');
       button.setAttribute("id", `btnStep${stepIndex}` );
       button.textContent = buttonText[stepIndex];
       stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg` )
-      if(window.innerWidth < window.innerHeight && window.innerHeight > 768 ){
+      if(window.innerWidth < window.innerHeight && window.innerHeight > 678 ){
         stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
         stepImg.style.display = "flex"
       } else {
