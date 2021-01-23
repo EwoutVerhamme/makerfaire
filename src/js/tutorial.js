@@ -118,22 +118,15 @@ const stepImg = document.querySelector('.step__right--img');
       switch(e.target.id) {
         case "btnStep0":
           renderStep(1)
-          setTimeout(() => {
-            animation.playSegments([0,25], true)
-          }, 1000);
-  
+          updateAnimation(0, 25)
           break;
           case "btnStep1":
             renderStep(2)
-            setTimeout(() => {
-              animation.playSegments([25,62], true) 
-            }, 1000);
+            updateAnimation(25, 62)
           break;
           case "btnStep2":
             renderStep(3)
-            setTimeout(() => {
-              animation.playSegments([82,123], true)
-            }, 1000);
+            updateAnimation(82, 123)
           break;
           case "btnStep3":
             renderStep(4)
@@ -156,6 +149,7 @@ const stepImg = document.querySelector('.step__right--img');
       }
       const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.","Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.","Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.","Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ","Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
       const buttonText = ["Body", "Aandrijving", "Wielen", "Creativiteit", "Afronden"]
+      const animationFrames = ["0,25", "25,62", "82,123"]
       // Set the HTML
       tutorialButton.forEach(button => {
       button.setAttribute("id", `btnStep${stepIndex}` );
@@ -169,8 +163,17 @@ const stepImg = document.querySelector('.step__right--img');
       }
       stepText.textContent = text[stepIndex];
       localStorage.setItem('step', stepIndex);
-      updateIndicators(stepIndex) 
+      if(stepIndex === "1") {updateAnimation(0, 25)}
+      if(stepIndex === "2"){updateAnimation(25, 62)} 
+      if(stepIndex === "3"){updateAnimation(82, 123)}
+      updateIndicators(stepIndex)
       });     
+    }
+
+    const updateAnimation = (firstFrame, lastFrame) => {
+      setTimeout(() => {
+        animation.playSegments([firstFrame,lastFrame], true)
+      }, 1000);
     }
 
 

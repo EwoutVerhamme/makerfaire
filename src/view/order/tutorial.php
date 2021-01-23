@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="step__right">
-                <div id="lottie-container"></div>
+                <div class="lottie__container" id="lottie-container"></div>
                 <img src="" alt="" class="step__right--img">
 
             </div>
