@@ -24,6 +24,10 @@ $routes = array(
     'controller' => 'Order',
     'action' => 'tutorial'
   ),
+  'checkout' => array(
+    'controller' => 'Order',
+    'action' => 'checkout'
+  ),
 );
 
 if(empty($_GET['page'])) {

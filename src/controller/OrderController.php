@@ -23,4 +23,8 @@ class OrderController extends Controller {
     $this->set('title', 'Tutorial');
   }
 
+  public function checkout() {
+    $this->set('title', 'Bestellen');
+  }
+
 }

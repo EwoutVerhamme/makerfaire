@@ -23,10 +23,6 @@ import lottie from 'lottie-web'
   const showImgButton = document.querySelector('.show__img--button')
   const stepImgWrapper = document.querySelector('.step__right ')
 
-  // Select the indicators
-  const mobileIndicators = document.querySelectorAll('.mobile__buttons');
-  const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
-
 const $lottieContainer = document.getElementById('lottie-container');
 const animation = lottie.loadAnimation({
   container: $lottieContainer, // the dom element that will contain the animation
@@ -40,10 +36,13 @@ const animation = lottie.loadAnimation({
 
   // Get the device width to set the settings and behaviours
   const checkWindowSize = () => {
+    const mobileIndicators = document.querySelectorAll('.mobile__buttons');
+    const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
+
     desktopIndicators.forEach(desktopIndicator => {
       desktopIndicator.style.display = "none"
     })
-    mobileIndicators.forEach(mobileIndicator => {
+    document.querySelectorAll('.mobile__buttons').forEach(mobileIndicator => {
       mobileIndicator.style.display = "none"
     })
 
