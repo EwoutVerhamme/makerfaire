@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--colorBackground);
+    padding-bottom: 1rem;
+    margin-top: var(--spacerBig);
+}
+
+.sponsors {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.sponsor__img {
+    margin: 1rem;
+}
+
+.footer__bottom--text {
+    text-align: center;
+}
+
+.footer__text {
+    font-size: var(--fontSmall);
+    margin: var(--spacerRegular);
+}
