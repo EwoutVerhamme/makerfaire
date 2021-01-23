@@ -1,4 +1,4 @@
-{
+import lottie from 'lottie-web'
     // Selectors
   const tutorialIntroButton = document.querySelectorAll('.intro__tutorial--button');
   const tutorialButton = document.querySelectorAll('.tutorial__button')
@@ -21,14 +21,32 @@
 
   // Show drawing on click in mobile view
   const showImgButton = document.querySelector('.show__img--button')
+  const stepImgWrapper = document.querySelector('.step__right ')
 
   // Select the indicators
   const mobileIndicators = document.querySelectorAll('.mobile__buttons');
   const desktopIndicators = document.querySelectorAll('.step__indicator--wrapper');
 
+const $lottieContainer = document.getElementById('lottie-container');
+const animation = lottie.loadAnimation({
+  container: $lottieContainer, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'assets/lottie/tutorial.json' // the path to the animation json
+});
+
+
+
   // Get the device width to set the settings and behaviours
   const checkWindowSize = () => {
-    window.addEventListener('resize', checkWindowSize)
+    desktopIndicators.forEach(desktopIndicator => {
+      desktopIndicator.style.display = "none"
+    })
+    mobileIndicators.forEach(mobileIndicator => {
+      mobileIndicator.style.display = "none"
+    })
+
     if(window.innerWidth < 678 && mobileIndicators && desktopIndicators){
       // Chance between mobile and desktop indicators
       mobileIndicators.forEach(mobileIndicator => {
@@ -36,14 +54,8 @@
         tip.textContent = ""
         showImgButton.style.display = "initial"  
       })
-      desktopIndicators.forEach(desktopIndicator => {
-        desktopIndicator.style.display = "none"
-      })
     } else {
       // Set for desktop
-      mobileIndicators.forEach(mobileIndicator => {
-        mobileIndicator.style.display = "none"
-      })
       desktopIndicators.forEach(desktopIndicator => {
         desktopIndicator.style.display = "flex"
           tip.textContent = "Vraag tips"
@@ -105,19 +117,25 @@ const stepImg = document.querySelector('.step__right--img');
     button.addEventListener('click', (e) => {
       switch(e.target.id) {
         case "btnStep0":
-          // Set Step 2
           renderStep(1)
+          setTimeout(() => {
+            animation.playSegments([0,25], true)
+          }, 1000);
+  
           break;
           case "btnStep1":
-            // Set step 3
             renderStep(2)
+            setTimeout(() => {
+              animation.playSegments([25,62], true) 
+            }, 1000);
           break;
           case "btnStep2":
-            // Set step 4
             renderStep(3)
+            setTimeout(() => {
+              animation.playSegments([82,123], true)
+            }, 1000);
           break;
           case "btnStep3":
-            // Set step 5
             renderStep(4)
           break;
         default:
@@ -155,25 +173,13 @@ const stepImg = document.querySelector('.step__right--img');
       });     
     }
 
-    const updateIndicators = (stepIndex) => {
-      // Set all the indicators colored
-    for(let i = 0; i <= stepIndex; i++){
-      const indicatorActive = document.querySelector(`.indicator${i}`)
-      const indicatorActiveMobile = document.querySelector(`.indicatorMobile${i}`)
 
-      if(indicatorActive && indicatorActiveMobile){
-        if(i > stepIndex  ) {
-          // Set all the passed indicators to passed
-          indicatorActiveMobile.classList.remove("step__indicator--activemobile");
-          indicatorActive.classList.remove("step__indicator--active");
-     }else {
-       // Set all the passed indicators to passed   
-       indicatorActiveMobile.classList.add("step__indicator--activemobile");
-       indicatorActive.classList.add("step__indicator--active");
-     }
-      }
-  
-}
+    const updateIndicators = (stepIndex) => {
+      const indicatorActive = document.querySelectorAll(`.step__indicator--number`)
+      let j;
+      for(j = 0; j < indicatorActive.length; j++){
+        indicatorActive[j].classList.remove("step__indicator--active");
+        }  
     }
 
     // Make the step indicators clickable 
@@ -201,11 +207,12 @@ const stepImg = document.querySelector('.step__right--img');
         renderStep(stepIndex)
       }
       // Check the windowsize on init
+      window.addEventListener('resize', checkWindowSize)
       checkWindowSize()
 
       if(showImgButton){
         showImgButton.addEventListener('click', () => {
-          stepImg.style.display === "block" ? stepImg.style.display = "none" : stepImg.style.display = "block"
+          stepImgWrapper.style.display === "flex" ? stepImgWrapper.style.display = "none" : stepImgWrapper.style.display = "flex";
         })
       }
   }
@@ -218,4 +225,3 @@ const stepImg = document.querySelector('.step__right--img');
 
   }
 init()
-}

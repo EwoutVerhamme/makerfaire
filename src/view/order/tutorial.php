@@ -113,7 +113,9 @@
                 </div>
             </div>
             <div class="step__right">
+                <div id="lottie-container"></div>
                 <img src="" alt="" class="step__right--img">
+
             </div>
         </div>
     </section>
