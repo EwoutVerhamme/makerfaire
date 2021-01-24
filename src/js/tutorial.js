@@ -59,8 +59,14 @@
 
   const checkWindowSize = () => {
     if (window.innerWidth <= 678) {
-      $tip ? $tip.textContent = "" : $tip.textContent = "Vraag tips"
-      $lottieContainerMobile.style.display = "none"
+      if ($tip) {
+        $tip.textContent = ""
+      } else {
+        if ($tip) {
+          $tip.textContent = "Vraag tips"
+        }
+
+      }
     }
   }
 
@@ -143,10 +149,15 @@
   const renderStep = () => {
 
     if (localStorage.getItem('step')) {
-      $popup.style.display = "none"
-      $header.style.display = "none"
+      if ($popup && $header) {
+        $popup.style.display = "none"
+        $header.style.display = "none"
+      }
+
     }
-    $stepsWrapper.style.display = "grid"
+    if ($stepsWrapper) {
+      $stepsWrapper.style.display = "grid"
+    }
     localStorage.setItem('step', stepIndex);
 
     const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.", "Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.", "Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.", "Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ", "Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
@@ -167,22 +178,30 @@
       }, 3000);
     }
     if (stepIndex === "1") {
-      $lottieFun.style.display = "none"
+      if ($lottieFun) {
+        $lottieFun.style.display = "none"
+      }
       updateAnimation(0, 25)
     }
     if (stepIndex === "2") {
-      $lottieFun.style.display = "none"
+      if ($lottieFun) {
+        $lottieFun.style.display = "none"
+      }
       updateAnimation(25, 62)
     }
     if (stepIndex === "3") {
-      $lottieFun.style.display = "none"
+      if ($lottieFun) {
+        $lottieFun.style.display = "none";
+      }
       updateAnimation(82, 123)
     }
     if (stepIndex === "4") {
-      $lottieFun.style.display = "none"
+      if ($lottieFun) {
+        $lottieFun.style.display = "none"
+      }
       console.log("step 5 incoming")
     }
-    updateIndicators()
+    // updateIndicators()
   }
 
   const updateAnimation = (firstFrame, lastFrame) => {
@@ -207,29 +226,31 @@
     indicator.addEventListener('click', (e) => {
       // Get the id of the indicator
       if (window.innerWidth < 678) {
-        stepIndex = e.path[1].id;
+        stepIndex = e.target.id;
         renderStep()
       } else {
-        stepIndex = e.path[2].id;
+        stepIndex = e.target.id;
         renderStep()
       }
     })
   });
 
 
-  const updateIndicators = () => {
-    const $mobileIndicators = document.querySelectorAll('.mobile__buttons');
-    const $desktopIndicators = document.querySelectorAll('.step__indicator--number');
-    let j;
-    for (j = 0; j <= stepIndex; j++) {
-      $mobileIndicators[j].classList.add("step__indicator--activemobile");
-      $desktopIndicators[j].classList.add("step__indicator--active");
-    }
-    if ($desktopIndicators) {
-      $mobileIndicators[j].classList.remove("step__indicator--activemobile");
-      $desktopIndicators[j].classList.remove("step__indicator--active");
-    }
-  }
+  // const updateIndicators = () => {
+  //   const $mobileIndicators = document.querySelectorAll('.mobile__buttons');
+  //   const $desktopIndicators = document.querySelectorAll('.step__indicator--number');
+  //   let j;
+  //   for (j = 0; j <= stepIndex; j++) {
+  //     if ($mobileIndicators && $desktopIndicators) {
+  //       $mobileIndicators[j].classList.add("step__indicator--activemobile");
+  //       $desktopIndicators[j].classList.add("step__indicator--active");
+  //     }
+  //   }
+  //   if ($desktopIndicators) {
+  //     $mobileIndicators[j].classList.remove("step__indicator--activemobile");
+  //     $desktopIndicators[j].classList.remove("step__indicator--active");
+  //   }
+  // }
 
 
   const init = () => {
