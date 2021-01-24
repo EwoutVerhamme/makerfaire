@@ -33,7 +33,7 @@ class OrderController extends Controller {
           $this->set('errors',$errors);
         }else{
           $_SESSION['info'] = 'Bedankt voor je order';
-          header('Location:index.php');
+          header('Location:index.php?page=thankyou');
           exit();
         }
       }

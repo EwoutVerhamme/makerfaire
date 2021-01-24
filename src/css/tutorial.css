@@ -238,7 +238,7 @@ justify-content: center;
     font-size: var(--fontRegular);
     font-weight: var(--fontWeightLight);
     line-height: 2.5rem;
-    max-width: 60rem;
+    max-width: 50rem;
     text-align: center;
 
     @media (--only-medium-screen) {
