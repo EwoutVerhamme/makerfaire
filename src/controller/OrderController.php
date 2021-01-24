@@ -41,4 +41,8 @@ class OrderController extends Controller {
   }
 
   }
+
+  public function thankyou() {
+    $this->set('title', 'Bedankt voor uw aankoop');
+  }
 }
