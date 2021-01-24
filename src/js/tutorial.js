@@ -1,6 +1,6 @@
   import lottie from 'lottie-web';
 
-  let stepIndex = 0;
+  let stepIndex = undefined;
 
   // Selectors
   const $tutorialIntroButton = document.querySelectorAll('.intro__tutorial--button');
@@ -24,6 +24,15 @@
     loop: false,
     autoplay: false,
     path: 'assets/lottie/tutorial.json' // the path to the animation json
+  });
+
+  const $lottieFun = document.getElementById('lottie__fun');
+  const funAnimation = lottie.loadAnimation({
+    container: $lottieFun, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "assets/lottie/coffee.json" // the path to the animation json
   });
 
   // Select all the steps
@@ -71,10 +80,13 @@
         case "dontwant":
           $popup.style.display = "none";
           $header.style.display = "none";
-          $stepsWrapper.style.zIndex = "2"
-          $stepsWrapper.classList.remove('hidden');
-          $stepsWrapper.style.display = "grid";
-          renderStep()
+          stepIndex = 0;
+          renderStep();
+          setTimeout(() => {
+            if (window.innerWidth > 900) {
+              funAnimation.play()
+            }
+          }, 3000);
           break;
         case "want":
           // UPDATE THE POPUP
@@ -120,16 +132,14 @@
   });
 
   const renderStep = () => {
-    console.log(stepIndex)
-    // Always set the popups and header to none
-    if ($popup) {
-      $popup.style.display = "none";
-      $header.style.display = "none";
-      // Always set the steps to view
-      $stepsWrapper.style.zIndex = "2"
-      $stepsWrapper.classList.remove('hidden');
-      $stepsWrapper.style.display = "grid";
+
+    if (localStorage.getItem('step')) {
+      $popup.style.display = "none"
+      $header.style.display = "none"
     }
+    localStorage.setItem('step', stepIndex);
+    $stepsWrapper.style.display = "grid"
+
     const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.", "Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.", "Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.", "Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ", "Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
     const buttonText = ["Body", "Aandrijving", "Wielen", "Creativiteit", "Afronden"]
 
@@ -140,20 +150,30 @@
       $stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg`)
       $stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
       $stepText.textContent = text[stepIndex];
-      localStorage.setItem('step', stepIndex);
-      if (stepIndex === "1") {
-        updateAnimation(0, 25)
-      }
-      if (stepIndex === "2") {
-        updateAnimation(25, 62)
-      }
-      if (stepIndex === "3") {
-        updateAnimation(82, 123)
-      }
-      if (stepIndex === "4") {
-        console.log("step 5 incoming")
-      }
     });
+    if (stepIndex === "0") {
+      setTimeout(() => {
+        if (window.innerWidth > 900) {
+          funAnimation.play()
+        }
+      }, 3000);
+    }
+    if (stepIndex === "1") {
+      $lottieFun.style.display = "none"
+      updateAnimation(0, 25)
+    }
+    if (stepIndex === "2") {
+      $lottieFun.style.display = "none"
+      updateAnimation(25, 62)
+    }
+    if (stepIndex === "3") {
+      $lottieFun.style.display = "none"
+      updateAnimation(82, 123)
+    }
+    if (stepIndex === "4") {
+      $lottieFun.style.display = "none"
+      console.log("step 5 incoming")
+    }
     updateIndicators()
   }
 

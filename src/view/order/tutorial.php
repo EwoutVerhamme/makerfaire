@@ -92,7 +92,7 @@
     </div>
 </header>
 
-<div class="steps__wrapper hidden">
+<div class="steps__wrapper">
     <nav class="steps__menu">
         <ul class="steps__menu--items">
             <li><a class="steps__menu--item back" href="index.php?page=tutorial">Verlaat de tutorial</a></li>
@@ -119,6 +119,10 @@
             </div>
         </div>
     </section>
+    <div id="lottie__fun" class="lottie__fun">
+        <audio autoplay="" muted="muted" src="../../assets/sounds/tutorial/coffee.m4a"
+            class="lottie__fun--audio"></audio>
+    </div>
     <div class="step__indicators">
         <div id="0" class="step__indicator ">
             <div class="mobile__buttons indicatorMobile0"></div>
