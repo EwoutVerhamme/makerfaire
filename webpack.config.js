@@ -9,7 +9,8 @@ module.exports = (env, { mode }) => {
   console.log(mode);
   return {
     output: {
-      filename: 'script.js'
+      filename: 'script.js',
+      publicPath: mode === "production" ? ''  : "http://localhost:8080/"
     },
     devServer: {
       overlay: true,

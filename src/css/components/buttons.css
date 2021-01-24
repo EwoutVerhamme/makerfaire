@@ -1,6 +1,5 @@
 
 .button {
-    margin-top: 1rem;
     background-color: var(--colorSecondary);
     border: none;
     font-family: var(--font);
@@ -12,6 +11,7 @@
     padding-right: 1.5rem;
     font-size: var(--fontRegular);
     cursor: pointer;
+    margin: 1rem;
 }
 
 .button__outline {
@@ -27,11 +27,11 @@
     padding-right: 1.5rem;
     font-size: var(--fontRegular);
     cursor: pointer;
-    margin-top: 1rem;
+    margin: 1rem;
 }
 
 .a__button {
-    margin-top: 1rem;
+    margin: 1rem;
     background-color: var(--colorSecondary);
     border: none;
     font-family: var(--font);
