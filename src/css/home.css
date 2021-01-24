@@ -17,6 +17,10 @@
     font-size: var(--fontBig);
     font-weight: var(--fontWeightAlt);
     color: var(--colorMain);
+
+    @media (--only-medium-screen) {
+        font-size:5rem;
+     }
 }
 
 .subtext {

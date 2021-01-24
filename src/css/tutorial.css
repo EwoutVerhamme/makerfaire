@@ -293,6 +293,10 @@ justify-content: center;
         }
 }
 
+.lottie__container--mobile{
+    width: 42rem;
+}
+
 .lottie__container {
     width: 20rem;
     display: none;
@@ -414,3 +418,56 @@ justify-content: center;
         display: block;
      }
 }
+
+.header__img{
+    position: absolute;
+    width: 55vw;
+
+    @media (--only-regular-screen) {
+        display: block;
+     }
+
+     @media (--only-medium-screen) {
+        width: 40rem;
+     }
+
+     @media (--only-wide-screen) {
+        width: 55rem;
+     }
+}
+
+.tools {
+    left: 0rem;
+    bottom: 4rem;
+
+    @media (--only-regular-screen) {
+        left: 5rem;
+        bottom: 25rem;
+     }
+
+     @media (--only-medium-screen) {
+        left: 14rem;
+        bottom: 20rem;
+     }
+
+     @media (--only-wide-screen) {
+        left: 20rem;
+        bottom: 20rem;
+     }
+}
+
+.car {
+    right: 1rem;
+    bottom: 1rem;
+
+    @media (--only-medium-screen) {
+        right: 10rem;
+        bottom: 10rem;
+     }
+
+     @media (--only-wide-screen) {
+        right: 20rem;
+        bottom: 15rem;
+     }
+}
+

@@ -76,7 +76,7 @@
 
     <div class="numbers">
         <div class="number__box">
-            <p class="number__text visitors count">
+            <p class="number__text visitors count">20.403
             </p>
             <p class="number__name">Bezoekers</p>
         </div>

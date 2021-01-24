@@ -88,7 +88,8 @@
                 <p class="indicator__text">moeilijk</p>
             </div>
         </div>
-
+        <img src="../../assets/img/home/tools.svg" alt="" class="header__img tools">
+        <img src="../../assets/img/home/car.svg" alt="Car drawing" class="header__img car">
     </div>
 </header>
 
@@ -115,13 +116,11 @@
             <div class="step__right">
                 <div class="lottie__container" id="lottie-container"></div>
                 <img src="" alt="" class="step__right--img">
-
+                <div class="lottie__container--mobile"></div>
             </div>
         </div>
     </section>
     <div id="lottie__fun" class="lottie__fun">
-        <audio autoplay="" muted="muted" src="../../assets/sounds/tutorial/coffee.m4a"
-            class="lottie__fun--audio"></audio>
     </div>
     <div class="step__indicators">
         <div id="0" class="step__indicator ">

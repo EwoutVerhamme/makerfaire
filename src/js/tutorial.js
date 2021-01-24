@@ -26,6 +26,15 @@
     path: 'assets/lottie/tutorial.json' // the path to the animation json
   });
 
+  const $lottieContainerMobile = document.querySelector('.lottie__container--mobile');
+  const animationMobile = lottie.loadAnimation({
+    container: $lottieContainerMobile, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'assets/lottie/tutorial_mobile.json' // the path to the animation json
+  });
+
   const $lottieFun = document.getElementById('lottie__fun');
   const funAnimation = lottie.loadAnimation({
     container: $lottieFun, // the dom element that will contain the animation
@@ -51,7 +60,7 @@
   const checkWindowSize = () => {
     if (window.innerWidth <= 678) {
       $tip ? $tip.textContent = "" : $tip.textContent = "Vraag tips"
-
+      $lottieContainerMobile.style.display = "none"
     }
   }
 
@@ -137,8 +146,8 @@
       $popup.style.display = "none"
       $header.style.display = "none"
     }
-    localStorage.setItem('step', stepIndex);
     $stepsWrapper.style.display = "grid"
+    localStorage.setItem('step', stepIndex);
 
     const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.", "Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.", "Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.", "Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ", "Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
     const buttonText = ["Body", "Aandrijving", "Wielen", "Creativiteit", "Afronden"]
@@ -148,7 +157,6 @@
       button.setAttribute("id", `btnStep${stepIndex}`);
       button.textContent = buttonText[stepIndex];
       $stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg`)
-      $stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
       $stepText.textContent = text[stepIndex];
     });
     if (stepIndex === "0") {
@@ -178,9 +186,17 @@
   }
 
   const updateAnimation = (firstFrame, lastFrame) => {
-    setTimeout(() => {
-      animation.playSegments([firstFrame, lastFrame], true)
-    }, 1000);
+    if (window.innerWidth > 900) {
+      setTimeout(() => {
+        animation.playSegments([firstFrame, lastFrame], true)
+      }, 1000);
+    }
+    if (window.innerWidth > 678 && window.innerWidth < 900) {
+      setTimeout(() => {
+        animationMobile.playSegments([firstFrame, lastFrame], true)
+      }, 1000);
+    }
+
   }
 
 
