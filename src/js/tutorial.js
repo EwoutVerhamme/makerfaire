@@ -42,19 +42,11 @@
   const stepImg = document.querySelector('.step__right--img');
 
 
-  const setMobile = () => {
-    tip.textContent = ""
-  }
-
-  const setDesktop = () => {
-    tip.textContent = "Vraag tips"
-  }
 
   const checkWindowSize = () => {
     if (window.innerWidth <= 678) {
-      setMobile()
-    } else {
-      setDesktop()
+      tip ? tip.textContent = "" : tip.textContent = "Vraag tips"
+
     }
   }
 
@@ -150,11 +142,7 @@
       button.setAttribute("id", `btnStep${stepIndex}`);
       button.textContent = buttonText[stepIndex];
       stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg`)
-      if (window.innerWidth < window.innerHeight && window.innerHeight > 678) {
-        stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
-      } else {
-        stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/image.svg`)
-      }
+      stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/plc.svg`)
       stepText.textContent = text[stepIndex];
       localStorage.setItem('step', stepIndex);
       if (stepIndex === "1") {
@@ -198,7 +186,6 @@
 
     if (localStorage.getItem("step")) {
       stepIndex = localStorage.getItem("step")
-      // Get the saved step 
       renderStep()
     }
     // Check the windowsize on init
@@ -214,7 +201,6 @@
   if (back) {
     back.addEventListener('click', () => {
       localStorage.removeItem('step')
-      console.log(localStorage)
     })
 
   }
