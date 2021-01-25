@@ -51,28 +51,28 @@
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="first_name">
                             <span class="input__label">Voornaam</span>
-                            <span
-                                class="error"><?php if(!empty($errors['first_name'])){ echo $errors['first_name'];} ?></span>
                             <input type="text" id="first_name" name="first_name" class="input"
                                 value="<?php if(!empty($_POST['first_name'])){ echo $_POST['first_name'];} ?>"
                                 required />
+                            <span
+                                class="error"><?php if(!empty($errors['first_name'])){ echo $errors['first_name'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="last_name">
                             <span class="input__label">Achternaam</span>
-                            <span
-                                class="error"><?php if(!empty($errors['last_name'])){ echo $errors['last_name'];} ?></span>
                             <input type="text" id="last_name" name="last_name" class="input"
                                 value="<?php if(!empty($_POST['last_name'])){ echo $_POST['last_name'];} ?>" required />
+                            <span
+                                class="error"><?php if(!empty($errors['last_name'])){ echo $errors['last_name'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="email">
                             <span class="input__label">Email</span>
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                             <input type="text" id="email" name="email" class="input"
                                 value="<?php if(!empty($_POST['email'])){ echo $_POST['email'];} ?>" required />
+                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
 
@@ -81,27 +81,27 @@
                         <div class="input__wrapper">
                             <label class="input__label--wrapper" for="zipcode">
                                 <span class="input__label">Postcode</span>
-                                <span
-                                    class="error"><?php if(!empty($errors['zipcode'])){ echo $errors['zipcode'];} ?></span>
                                 <input type="text" id="zipcode" name="zipcode" class="input"
                                     value="<?php if(!empty($_POST['zipcode'])){ echo $_POST['zipcode'];} ?>" required />
+                                <span
+                                    class="error"><?php if(!empty($errors['zipcode'])){ echo $errors['zipcode'];} ?></span>
                             </label>
                         </div>
                         <div class="input__wrapper">
                             <label class="input__label--wrapper" for="town">
                                 <span class="input__label">Gemeente</span>
-                                <span class="error"><?php if(!empty($errors['town'])){ echo $errors['town'];} ?></span>
                                 <input type="text" id="town" name="town" class="input"
                                     value="<?php if(!empty($_POST['town'])){ echo $_POST['town'];} ?>" required />
+                                <span class="error"><?php if(!empty($errors['town'])){ echo $errors['town'];} ?></span>
                             </label>
                         </div>
                         <div class="input__wrapper">
                             <label class="input__label--wrapper" for="street">
                                 <span class="input__label">Straat & nummer</span>
-                                <span
-                                    class="error"><?php if(!empty($errors['street'])){ echo $errors['street'];} ?></span>
                                 <input type="text" id="street" name="street" class="input"
                                     value="<?php if(!empty($_POST['street'])){ echo $_POST['street'];} ?>" required />
+                                <span
+                                    class="error"><?php if(!empty($errors['street'])){ echo $errors['street'];} ?></span>
                             </label>
                         </div>
                     </div>
@@ -114,36 +114,36 @@
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="cart_name">
                             <span class="input__label">Kaarthouder</span>
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                             <input type="text" name="" class="input" value="" required />
+                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="cart_name">
                             <span class="input__label">Kaartnummer</span>
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                             <input type="text" name="" class="input" value="" required />
+                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
                         <label class="input__label--wrapper" for="cart_name">
                             <span class="input__label">Vervaldatum</span>
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                             <input type="text" name="" class="input" value="" required />
+                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
                     <div class="checkout__total">
                         <p class="checkout__total--text">Totaal</p>
                         <p class="checkout__total--text">€35,00</p>
                     </div>
+                    <div class="order__button--wrapper">
+                        <button class="button order__button" type="submit">Bestellen</button>
+                    </div>
                 </div>
 
 
                 <div class="checkout__kit checkout__block">
 
-                </div>
-                <div class="order__button--wrapper">
-                    <button class="button order__button" type="submit">Bestellen</button>
                 </div>
             </div>
         </form>

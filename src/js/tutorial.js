@@ -159,7 +159,7 @@
           break;
         case "material":
           $popupButton2.setAttribute("id", "dontwant")
-          $window.location = "index.php?page=kit";
+          window.location = "index.php?page=kit";
           break;
         case "letsgo":
           $popupButton1.setAttribute("id", "dontwant")
