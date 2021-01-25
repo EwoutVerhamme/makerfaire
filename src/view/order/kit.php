@@ -4,7 +4,7 @@
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
             <ul class="menu__items">
-                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
+                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
@@ -26,7 +26,7 @@
                     <div>
                         <div>
                             <ul>
-                                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
+                                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
                                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                                 </li>

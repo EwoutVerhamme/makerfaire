@@ -2,40 +2,40 @@
     <nav class="nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
-                    ../../assets/img/home/logo_nav.svg"></a>
+                    ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
             <ul class="menu__items">
-                <li><a class="menu__item" href="index.php">Maker Faire</a></li>
-                <li><a class="menu__item active" href="index.php?page=kit">DIY-pakket</a></li>
+                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
+                <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
-                <ul class="language">
-                    <li><a class="language__text active" href="#">NL</a></li>
-                    <li><a class="language__text" href="#">/ FR</a></li>
-                </ul>
-
+                <li><a class="language__text active" href="#">NL</a></li>
+                <li><a class="language__text" href="#">/ FR</a></li>
             </ul>
         </div>
     </nav>
     <nav class="nav__wrapper">
-        <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"></a>
+        <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"
+                alt="Logo Maker Faire"></a>
         <div class="nav">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger">
-                <div></div>
-            </div>
-            <div class="menu">
-                <div>
+            <div class="nav">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
                     <div>
-                        <ul>
-                            <li><a class="menu__item" href="index.php">Maker Faire</a></li>
-                            <li><a class="menu__item active" href="index.php?page=kit">DIY-pakket</a></li>
-                            <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
-                            </li>
-                            <ul class="language">
+                        <div>
+                            <ul>
+                                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
+                                <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
+                                <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
+                                </li>
+
                                 <li><a class="language__text active" href="#">NL</a></li>
                                 <li><a class="language__text" href="#">/ FR</a></li>
+
                             </ul>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,23 +112,23 @@
                 <h2 class="checkout__title">Betaalmethode</h2>
                 <div class="checkout__method ">
                     <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="cart_name">
+                        <label class="input__label--wrapper">
                             <span class="input__label">Kaarthouder</span>
-                            <input type="text" name="" class="input" value="" required />
+                            <input type="text" class="input" required />
                             <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="cart_name">
+                        <label class="input__label--wrapper">
                             <span class="input__label">Kaartnummer</span>
-                            <input type="text" name="" class="input" value="" required />
+                            <input type="text" class="input" required />
                             <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
                     <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="cart_name">
+                        <label class="input__label--wrapper">
                             <span class="input__label">Vervaldatum</span>
-                            <input type="text" name="" class="input" value="" required />
+                            <input type="text" class="input" required />
                             <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                         </label>
                     </div>
@@ -149,3 +149,4 @@
         </form>
 
     </article>
+</div>
