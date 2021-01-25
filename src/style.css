@@ -4,6 +4,7 @@
 @import "./css/kit.css";
 @import "./css/tutorial.css";
 @import "./css/checkout.css";
+@import "./css/thankyou.css";
 
 /* Components */
 @import "./css/components/navigation.css";
