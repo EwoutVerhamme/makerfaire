@@ -1,4 +1,4 @@
-<video id="video" autoplay="true" src="" class="video"></video>
+<video id="video"></video>
 <div class="popup__wrapper">
     <div class="popup">
         <div class="popup__info--wrapper">

@@ -5,21 +5,26 @@ const postcssPresetEnv = require('postcss-preset-env');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 
-module.exports = (env, { mode }) => {
+module.exports = (env, {
+  mode
+}) => {
   console.log(mode);
   return {
     output: {
       filename: 'script.js',
-      publicPath: mode === "production" ? ''  : "http://localhost:8080/"
+      publicPath: mode === "production" ? '' : "http://localhost:8080/"
     },
     devServer: {
       overlay: true,
       hot: true,
       disableHostCheck: true
     },
+    externals: {
+      'ml5': 'ml5',
+      'p5': 'p5'
+    },
     module: {
-      rules: [
-        {
+      rules: [{
           test: /\.(jpe?g|png|svg|webp)$/,
           use: {
             loader: 'file-loader',
@@ -32,9 +37,9 @@ module.exports = (env, { mode }) => {
         {
           test: /\.css$/,
           use: [
-            mode === 'production'
-              ? MiniCssExtractPlugin.loader
-              : 'style-loader',
+            mode === 'production' ?
+            MiniCssExtractPlugin.loader :
+            'style-loader',
             'css-loader',
             'resolve-url-loader',
             {
@@ -44,7 +49,9 @@ module.exports = (env, { mode }) => {
                 postcssOptions: {
                   plugins: [
                     require('postcss-import'),
-                    postcssPresetEnv({ stage: 0 })
+                    postcssPresetEnv({
+                      stage: 0
+                    })
                   ]
                 }
               }

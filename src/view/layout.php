@@ -32,6 +32,7 @@
 
     <?php echo $content; ?>
     <?php echo $js; ?>
+    </script>
 </body>
 
 </html>

@@ -1,8 +1,13 @@
   import lottie from 'lottie-web';
+  import * as handTrack from "handtrackjs";
+
+  const video = document.querySelector("#video");
 
   let stepIndex = undefined;
-  let predictions = [];
-  const video = document.getElementById('video');
+  // const stepMinIndex = 0;
+  // const stepMaxIndex = 4;
+
+  let model;
 
   // Selectors
   const $tutorialIntroButton = document.querySelectorAll('.intro__tutorial--button');
@@ -46,25 +51,71 @@
     path: "assets/lottie/coffee.json" // the path to the animation json
   });
 
-  const loadHandtrack = async () => {
-    const ml5 = await import('ml5');
-    // Create a new handpose method
-    const handpose = ml5.handpose(video, modelLoaded);
+  const loadHandtrack = () => {
+    Navigator.getUserMedia =
+      Navigator.getUserMedia ||
+      Navigator.webkitUserMedia ||
+      Navigator.mozUserMedia ||
+      Navigator.msUserMedia;
+
+    const modelParams = {
+      flipHorizontal: true, // flip e.g for video
+      imageScaleFactor: 0.7, // reduce input image size for gains in speed.
+      maxNumBoxes: 3, // maximum number of boxes to detect
+      iouThreshold: 0.5, // ioU threshold for non-max suppression
+      scoreThreshold: 0.50, // confidence threshold for predictions.
+    };
 
 
-    // Listen to new 'predict' events
-    handpose.on('predict', results => {
-      console.log(results)
+    handTrack.startVideo(video).then((status) => {
+      if (status) {
+        navigator.getUserMedia({
+            video: {}
+          },
+          (stream) => {
+            video.srcObject = stream;
+            setInterval(runDetection, 1000);
+          },
+          (err) => console.log(err)
+        );
+      }
+    });
+
+    function runDetection() {
+      model.detect(video).then((predictions) => {
+        if (predictions.length > 0) {
+          if (stepIndex === undefined) {
+            stepIndex = 0
+          }
+
+          console.log(predictions[0].bbox[0]);
+          if (predictions[0].bbox[0] > 200) {
+            if (stepIndex < 4) {
+              stepIndex++;
+              console.log(stepIndex)
+              renderStep()
+            }
+
+          }
+
+          if (predictions[0].bbox[0] < 200) {
+            if (stepIndex > 0) {
+              stepIndex--;
+              console.log(stepIndex)
+              renderStep()
+            }
+          }
+
+        }
+
+        $handtrack.textContent = "Steek je rechter hand omhoog om door te gaan!"
+      });
+    }
+    handTrack.load(modelParams).then((lmodel) => {
+      model = lmodel;
     });
 
   }
-
-  // When the model is loaded
-  function modelLoaded() {
-    console.log('Model Loaded!');
-    $handtrack.textContent = "Swipe met je hand van links naar rechts"
-  }
-
 
 
   // Select all the steps
@@ -171,6 +222,7 @@
   });
 
   const renderStep = () => {
+    console.log(stepIndex)
     if ($popup && $header) {
       $popup.style.display = "none"
       $header.style.display = "none"
@@ -277,8 +329,10 @@
     checkWindowSize()
 
     if (localStorage.getItem("step")) {
+      loadHandtrack()
       stepIndex = localStorage.getItem("step")
       renderStep()
+
     }
     // Check the windowsize on init
     window.addEventListener('resize', checkWindowSize)
