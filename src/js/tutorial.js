@@ -4,9 +4,6 @@
   const video = document.querySelector("#video");
 
   let stepIndex = undefined;
-  // const stepMinIndex = 0;
-  // const stepMaxIndex = 4;
-
   let model;
 
   // Selectors
@@ -24,6 +21,10 @@
   const $handtrack = document.querySelector('.handtrack');
   const $noHandTrack = document.querySelector('.nohandtrack');
 
+
+
+
+  // LOTTIE FILES
   const $lottieContainer = document.getElementById('lottie-container');
   const animation = lottie.loadAnimation({
     container: $lottieContainer, // the dom element that will contain the animation
@@ -51,6 +52,8 @@
     path: "assets/lottie/coffee.json" // the path to the animation json
   });
 
+
+  // HANDTRACK MODEL
   const loadHandtrack = () => {
     Navigator.getUserMedia =
       Navigator.getUserMedia ||

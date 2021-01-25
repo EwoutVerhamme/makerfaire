@@ -1,5 +1,5 @@
 .header {
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background-image: url(/assets/img/home/header_bg.svg);
     background-position: center;
@@ -8,8 +8,16 @@
 }
 
 .header__info {
-    padding-top: 10rem;
+    padding-top: 6rem;
     animation: fadein 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (--only-regular-screen) {
+        padding-top: 10rem;
+     }
+
 }
 
 .header__title {
@@ -44,7 +52,6 @@
 }
 
 .container {
-    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,6 +144,79 @@
 .number__name{
     font-size: var(--fontRegular);
     margin-top: 1rem;
+}
+
+.header__img--home {
+    animation: fadein 2s;
+    z-index: 0;
+    width: 90%;
+    max-width: 100rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.car__home {
+    width: 15rem;
+    left: 0rem;
+    bottom: 2rem;
+
+    @media (--only-regular-screen) {
+        width: 35rem;
+        left: 0rem;
+        bottom: 15rem;
+    }
+
+    @media (--only-medium-screen) {
+        width: 45rem;
+        left: 0rem;
+        bottom: 0rem;
+    }
+
+    @media (--only-wide-screen) {
+        left: 20rem;
+        width: 55rem;
+    }
+}
+
+.protractor {
+    width: 13rem;
+    right: 5rem;
+    bottom: 12rem;
+
+    @media (--only-regular-screen) {
+        width: 30rem;
+        right: 4rem;
+        bottom: 30rem;
+    }
+
+    @media (--only-medium-screen) {
+        bottom: 25rem;
+    }
+
+    @media (--only-wide-screen) {
+        right: 10rem;
+        width: 35rem;
+    }
+
+}
+
+.triangle {
+    width: 10rem;
+    right: 2rem;
+    bottom: 2rem;
+
+
+    @media (--only-regular-screen) {
+        width: 25rem;
+        right: 14rem;
+        bottom: 5rem;
+    }
+
+    @media (--only-wide-screen) {
+        width: 30rem;
+        right: 30rem;
+    }
+
 }
 
 @keyframes fadein {

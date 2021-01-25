@@ -12,7 +12,6 @@
                     <li><a class="language__text active" href="#">NL</a></li>
                     <li><a class="language__text" href="#">/ FR</a></li>
                 </ul>
-
             </ul>
         </div>
     </nav>
@@ -51,7 +50,17 @@
         <div class="button__wrapper">
             <a href="index.php?page=tutorial" class="a__button">Naar de tutorial</a>
         </div>
+        <picture>
+            <source media="(max-width: 360px)" srcset="../../assets/img/home/attributes_320.png">
+            <source media="(max-width: 678px)" srcset="../../assets/img/home/attributes_mobile.png">
+            <source media="(max-width: 1023px)" srcset="../../assets/img/home/attributes_678.png">
+            <img src="../../assets/img/home/attributes_1024.png">
+        </picture>
+        <!-- <img src="../../assets/img/home/attributes.svg" alt="" class="header__img--home"> -->
     </div>
+    <!-- <img src="../../assets/img/home/car.svg" alt="" class="header__img--home car__home">
+    <img src="../../assets/img/home/protractor.svg" alt="" class="header__img--home protractor">
+    <img src="../../assets/img/home/triangle.svg" alt="" class="header__img--home triangle"> -->
 </header>
 <div id="makerfaire" class="spacer"></div>
 <main class="container">
