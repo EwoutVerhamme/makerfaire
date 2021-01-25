@@ -219,6 +219,11 @@
 
 }
 
+.sponser__img {
+    width: auto;
+    height: auto;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

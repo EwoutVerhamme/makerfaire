@@ -11,7 +11,7 @@
 
 <body>
     <div
-        style="display: flex; align-items: center; justify-content: space-between; background: black; color: white; position: fixed; top: 0; left: 0; width: 100%; padding: 0.5em; font-size: 12px; font-family: sans-serif; z-index: 1;">
+        style="display: flex; align-items: center; justify-content: space-between; background: black; color: white; position: fixed; top: 0; left: 0; width: 100%; padding: 0.5em; font-size: 12px; font-family: sans-serif; z-index: 10;">
         <span>This is a fictional project, a student assignment for the Bachelor's degree <a href="https://devine.be"
                 style="color: white;">Devine</a></span><button
             style="border: 0; padding: 0; background: black; color: white; margin: 0 0.5em; padding: 0 0.5em; cursor: pointer; font-size: 12px; "
