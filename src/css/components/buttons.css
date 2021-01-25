@@ -12,7 +12,7 @@
     font-size: var(--fontRegular);
     cursor: pointer;
     margin: 1rem;
-    z-index: 6;
+    z-index: 1;
 }
 
 .button__outline {
@@ -29,7 +29,7 @@
     font-size: var(--fontRegular);
     cursor: pointer;
     margin: 1rem;   
-     z-index: 6;
+     z-index: 1;
 }
 
 .a__button {
@@ -49,5 +49,5 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
-    z-index: 6;
+    z-index: 1;
 }

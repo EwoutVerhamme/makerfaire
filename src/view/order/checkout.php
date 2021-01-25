@@ -49,14 +49,6 @@
                 <div class="data__wrapper">
                     <h2 class="checkout__title">Gegevens</h2>
                     <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="email">
-                            <span class="input__label">Email</span>
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
-                            <input type="text" id="email" name="email" class="input"
-                                value="<?php if(!empty($_POST['email'])){ echo $_POST['email'];} ?>" required />
-                        </label>
-                    </div>
-                    <div class="input__wrapper">
                         <label class="input__label--wrapper" for="first_name">
                             <span class="input__label">Voornaam</span>
                             <span
@@ -73,6 +65,14 @@
                                 class="error"><?php if(!empty($errors['last_name'])){ echo $errors['last_name'];} ?></span>
                             <input type="text" id="last_name" name="last_name" class="input"
                                 value="<?php if(!empty($_POST['last_name'])){ echo $_POST['last_name'];} ?>" required />
+                        </label>
+                    </div>
+                    <div class="input__wrapper">
+                        <label class="input__label--wrapper" for="email">
+                            <span class="input__label">Email</span>
+                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
+                            <input type="text" id="email" name="email" class="input"
+                                value="<?php if(!empty($_POST['email'])){ echo $_POST['email'];} ?>" required />
                         </label>
                     </div>
 

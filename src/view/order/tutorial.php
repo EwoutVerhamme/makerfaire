@@ -89,8 +89,12 @@
                 <p class="indicator__text">moeilijk</p>
             </div>
         </div>
-        <img src="../../assets/img/home/tools.svg" alt="" class="header__img tools">
-        <img src="../../assets/img/home/car.svg" alt="Car drawing" class="header__img car">
+        <picture>
+            <source media="(max-width: 360px)" srcset="../../assets/img/tutorial/landing_320.png">
+            <source media="(max-width: 678px)" srcset="../../assets/img/tutorial/landing_mobile.png">
+            <source media="(max-width: 1023px)" srcset="../../assets/img/tutorial/landing_1024.png">
+            <img src="../../assets/img/tutorial/landing_1024.png">
+        </picture>
     </div>
 </header>
 

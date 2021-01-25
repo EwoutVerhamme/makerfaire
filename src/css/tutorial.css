@@ -1,3 +1,11 @@
+#video {
+    display: none;
+}
+
+.header {
+    overflow: hidden;
+}
+
 .indicators{
 display: flex;
 align-items: center;
@@ -8,7 +16,10 @@ justify-content: center;
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
+    justify-content: flex-start;
+    left: 0;
+    bottom: 35%;
+
 }
 }
 
@@ -494,6 +505,3 @@ justify-content: center;
      }
 }
 
-video {
-    display: none;
-}
