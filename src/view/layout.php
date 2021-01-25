@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Maker Faire">
-    <noscript>Je hebt JavaScript nodig om deze website te runnen.</noscript>
     <title>Maker Faire - <?php echo $title; ?></title>
     <?php echo $css;?>
 </head>
@@ -32,7 +31,6 @@
 
     <?php echo $content; ?>
     <?php echo $js; ?>
-    </script>
 </body>
 
 </html>

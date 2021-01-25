@@ -27,25 +27,23 @@
 </div>
 
 <header class="header">
-    <nav class=" nav__big">
+    <nav class="nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
-                    ../../assets/img/home/logo_nav.svg"></a>
+                    ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
             <ul class="menu__items">
-                <li><a class="menu__item" href="index.php">Maker Faire</a></li>
+                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
-                <ul class="language">
-                    <li><a class="language__text active" href="#">NL</a></li>
-                    <li><a class="language__text" href="#">/ FR</a></li>
-                </ul>
-
+                <li><a class="language__text active" href="#">NL</a></li>
+                <li><a class="language__text" href="#">/ FR</a></li>
             </ul>
         </div>
     </nav>
     <nav class="nav__wrapper">
-        <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"></a>
+        <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"
+                alt="Logo Maker Faire"></a>
         <div class="nav">
             <div class="nav">
                 <input type="checkbox" class="toggler">
@@ -56,19 +54,20 @@
                     <div>
                         <div>
                             <ul>
-                                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
+                                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
                                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
-                                <li><a class="menu__item highlight" href="index.php?page=tutorial">Tutorial</a>
+                                <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                                 </li>
-                                <ul class="language">
-                                    <li><a class="language__text active" href="#">NL</a></li>
-                                    <li><a class="language__text" href="#">/ FR</a></li>
-                                </ul>
+
+                                <li><a class="language__text active" href="#">NL</a></li>
+                                <li><a class="language__text" href="#">/ FR</a></li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </nav>
     <div class="header__info">
         <h1 class="header__title">Dragracewagen tutorial</h1>
@@ -81,11 +80,12 @@
         </div>
         <div class="indicators">
             <div class="indicator">
-                <img height="80" src="../../assets/img/tutorial/time.svg" alt="" class="indicator__img">
+                <img height="80" src="../../assets/img/tutorial/time.svg" alt="Time indicator" class="indicator__img">
                 <p class="indicator__text">3 uur</p>
             </div>
             <div class="indicator">
-                <img height="81" src="../../assets/img/tutorial/difficulty.svg" alt="" class="indicator__img">
+                <img height="81" src="../../assets/img/tutorial/difficulty.svg" alt="Moeilijkheidsgraad"
+                    class="indicator__img">
                 <p class="indicator__text">moeilijk</p>
             </div>
         </div>
@@ -93,7 +93,7 @@
             <source media="(max-width: 360px)" srcset="../../assets/img/tutorial/landing_320.png">
             <source media="(max-width: 678px)" srcset="../../assets/img/tutorial/landing_mobile.png">
             <source media="(max-width: 1023px)" srcset="../../assets/img/tutorial/landing_1024.png">
-            <img src="../../assets/img/tutorial/landing_1024.png">
+            <img alt="Landings pagina attributen" src="../../assets/img/tutorial/landing_1024.png">
         </picture>
     </div>
 </header>
@@ -109,7 +109,7 @@
         <div class="step__wrapper">
             <div class="step__left">
                 <div class="step__intro">
-                    <img src="" alt="" class="step__title">
+                    <img src="../../assets/img/tutorial/plc.png" alt="Tutorial titel" class="step__title">
                     <p class="step__subtext"> </p>
                 </div>
                 <div class="step__button--wrapper">
@@ -120,7 +120,7 @@
             </div>
             <div class="step__right">
                 <div class="lottie__container" id="lottie-container"></div>
-                <img src="" alt="" class="step__right--img">
+                <img src="../../assets/img/tutorial/plc.png" alt="Tutorial uitleg foto" class="step__right--img">
                 <div class="lottie__container--mobile"></div>
             </div>
         </div>

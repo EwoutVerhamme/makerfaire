@@ -55,11 +55,11 @@
 
   // HANDTRACK MODEL
   const loadHandtrack = () => {
-    Navigator.getUserMedia =
-      Navigator.getUserMedia ||
-      Navigator.webkitUserMedia ||
-      Navigator.mozUserMedia ||
-      Navigator.msUserMedia;
+    navigator.getUserMedia =
+      navigator.getUserMedia ||
+      navigator.webkitUserMedia ||
+      navigator.mozUserMedia ||
+      navigator.msUserMedia;
 
     const modelParams = {
       flipHorizontal: true, // flip e.g for video
