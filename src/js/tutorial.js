@@ -222,13 +222,13 @@
   });
 
   const renderStep = () => {
-    console.log(stepIndex)
     if ($popup && $header) {
       $popup.style.display = "none"
       $header.style.display = "none"
     }
     if ($stepsWrapper) {
       $stepsWrapper.style.display = "grid"
+      $stepsWrapper.style.filter = "blur(0px)";
     }
     localStorage.setItem('step', stepIndex);
 
@@ -327,12 +327,20 @@
 
   const init = () => {
     checkWindowSize()
-
     if (localStorage.getItem("step")) {
-      loadHandtrack()
       stepIndex = localStorage.getItem("step")
-      renderStep()
+      $header.style.display = "none";
+      $stepsWrapper.style.filter = "blur(8px)";
+      $stepsWrapper.style.display = "grid"
+      $popup.style.zIndex = "5";
+      $popup.style.animation = "fadein 2s"
 
+      $popupButton1.setAttribute("id", "dontwant")
+      $popupButton2.setAttribute("id", "want")
+      $popupTitle.innerHTML = "Ooh, nog even dit";
+      $popupSubtext.innerHTML = "Wij maken gebruik van je camera en handen om verder te gaan naar de volgende stap. Zo kan je zelf met vieze handen navigeren door onze tutorial!";
+      $popupButton1.textContent = "Liever niet";
+      $popupButton2.textContent = "Lijkt me leuk!";
     }
     // Check the windowsize on init
     window.addEventListener('resize', checkWindowSize)
