@@ -327,7 +327,7 @@
 
   const init = () => {
     checkWindowSize()
-    if (localStorage.getItem("step")) {
+    if (localStorage.getItem("step") && $stepsWrapper) {
       stepIndex = localStorage.getItem("step")
       $header.style.display = "none";
       $stepsWrapper.style.filter = "blur(8px)";
