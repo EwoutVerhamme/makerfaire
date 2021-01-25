@@ -1,3 +1,12 @@
+.checkout__wrapper{
+    height: 100%;
+    width: 100vw;
+    background-image: url(/assets/img/home/header_bg.svg);
+    background-position: center;
+    background-repeat:repeat;
+    background-color: white;
+}
+
 .checkout {
     padding-top: 7rem;
 
@@ -61,12 +70,13 @@
 }
 
 .checkout__block {
-    background-color: var(--colorBackground);
     margin: 1rem;
 }
 
 .input__wrapper {
     margin: .5rem;
+    margin-top: 1rem;
+
 }
 
 .input__label--wrapper{
@@ -81,5 +91,25 @@
 
 .input {
     height: 4rem;
-    border-bottom: 1px solid #ddd;
+    border: .1rem solid var(--colorMain);
+    border-radius: .5rem
+}
+
+.checkout__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.checkout__total--text {
+    font-size: var(--fontMedium);
+}
+
+.order__button--wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.order__button {
+    margin: 0 auto;
 }

@@ -1,6 +1,8 @@
   import lottie from 'lottie-web';
 
   let stepIndex = undefined;
+  let predictions = [];
+  const video = document.getElementById('video');
 
   // Selectors
   const $tutorialIntroButton = document.querySelectorAll('.intro__tutorial--button');
@@ -43,6 +45,27 @@
     autoplay: false,
     path: "assets/lottie/coffee.json" // the path to the animation json
   });
+
+  const loadHandtrack = async () => {
+    const ml5 = await import('ml5');
+    // Create a new handpose method
+    const handpose = ml5.handpose(video, modelLoaded);
+
+
+    // Listen to new 'predict' events
+    handpose.on('predict', results => {
+      console.log(results)
+    });
+
+  }
+
+  // When the model is loaded
+  function modelLoaded() {
+    console.log('Model Loaded!');
+    $handtrack.textContent = "Swipe met je hand van links naar rechts"
+  }
+
+
 
   // Select all the steps
   const $stepsWrapper = document.querySelector('.steps__wrapper')
@@ -104,6 +127,7 @@
           }, 3000);
           break;
         case "want":
+          loadHandtrack()
           // UPDATE THE POPUP
           $popupTitle.innerHTML = "En dit...";
           $popupSubtext.innerHTML = "Maak een zwaai beweging met 1 hand voor je camera om naar de volgende stap te gaan. Wil je toch liever klikken of werkt er iets niet? Geen probleem, even goede vrienden!";
@@ -147,13 +171,9 @@
   });
 
   const renderStep = () => {
-
-    if (localStorage.getItem('step')) {
-      if ($popup && $header) {
-        $popup.style.display = "none"
-        $header.style.display = "none"
-      }
-
+    if ($popup && $header) {
+      $popup.style.display = "none"
+      $header.style.display = "none"
     }
     if ($stepsWrapper) {
       $stepsWrapper.style.display = "grid"
@@ -262,6 +282,20 @@
     }
     // Check the windowsize on init
     window.addEventListener('resize', checkWindowSize)
+
+    if ($noHandTrack) {
+      stepIndex = 0;
+      $noHandTrack.addEventListener('click', () => {
+        if ($popup && $header) {
+          $popup.style.display = "none"
+          $header.style.display = "none"
+        }
+        if ($stepsWrapper) {
+          $stepsWrapper.style.display = "grid"
+          renderStep()
+        }
+      })
+    }
 
     if ($showImgButton) {
       $showImgButton.addEventListener('click', () => {

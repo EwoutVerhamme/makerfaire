@@ -313,9 +313,6 @@ justify-content: center;
     @media (--only-medium-screen) {
         display: block;
     }
-    @media (--only-big-screen) {
-        width: 35rem;
-    }
 }
 
 .show__img--button {

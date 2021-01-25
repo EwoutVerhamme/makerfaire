@@ -12,6 +12,7 @@
     font-size: var(--fontRegular);
     cursor: pointer;
     margin: 1rem;
+    z-index: 6;
 }
 
 .button__outline {
@@ -27,7 +28,8 @@
     padding-right: 1.5rem;
     font-size: var(--fontRegular);
     cursor: pointer;
-    margin: 1rem;
+    margin: 1rem;   
+     z-index: 6;
 }
 
 .a__button {
@@ -47,4 +49,5 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+    z-index: 6;
 }

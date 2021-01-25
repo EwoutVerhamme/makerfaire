@@ -1,3 +1,4 @@
+<video id="video" autoplay="true" src="" class="video"></video>
 <div class="popup__wrapper">
     <div class="popup">
         <div class="popup__info--wrapper">
@@ -156,7 +157,7 @@
             <div id="4" class="mobile__buttons indicatorMobile4"></div>
             <div id="4" class="step__indicator--wrapper">
                 <p id="4" class="step__indicator--number indicator4">5</p>
-                <p id="4" class="step__indicator--text">creativiteit</p>
+                <p id="4" class="step__indicator--text">testen</p>
             </div>
         </div>
     </div>

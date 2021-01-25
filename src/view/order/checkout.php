@@ -108,12 +108,6 @@
                 </div>
             </div>
 
-
-            <div class="checkout__kit checkout__block">
-
-            </div>
-
-
             <div class="checkout__payment checkout__block">
                 <h2 class="checkout__title">Betaalmethode</h2>
                 <div class="checkout__method ">
@@ -139,11 +133,18 @@
                         </label>
                     </div>
                     <div class="checkout__total">
-                        <p class="checkout__total--title">Totaal</p>
-                        <p class="checkout__total--price">€35,00</p>
+                        <p class="checkout__total--text">Totaal</p>
+                        <p class="checkout__total--text">€35,00</p>
                     </div>
                 </div>
-                <button class="button" type="submit">Bestellen</button>
+
+
+                <div class="checkout__kit checkout__block">
+
+                </div>
+                <div class="order__button--wrapper">
+                    <button class="button order__button" type="submit">Bestellen</button>
+                </div>
             </div>
         </form>
 
