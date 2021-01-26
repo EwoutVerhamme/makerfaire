@@ -1,5 +1,6 @@
 <video id="video"></video>
 <div class="popup__wrapper">
+    <h1 class="hidden">Maker Faire Tutorial</h1>
     <div class="popup">
         <div class="popup__info--wrapper">
             <div class="popup__text">
@@ -27,7 +28,7 @@
 </div>
 
 <header class="header">
-    <nav class="nav__big">
+    <div class="nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
@@ -40,8 +41,8 @@
                 <li><a class="language__text" href="#">/ FR</a></li>
             </ul>
         </div>
-    </nav>
-    <nav class="nav__wrapper">
+    </div>
+    <div class="nav__wrapper">
         <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"
                 alt="Logo Maker Faire"></a>
         <div class="nav">
@@ -68,9 +69,9 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
     <div class="header__info">
-        <h1 class="header__title">Dragracewagen tutorial</h1>
+        <h2 class="header__title">Dragracewagen tutorial</h2>
         <p class="header__subtext subtext">
             Welkom bij de tutorial! Hierin helpen we je om een échte dragracewagen te bouwen. Het is belangrijk <span
                 class="span">alles
@@ -99,13 +100,14 @@
 </header>
 
 <div class="steps__wrapper">
-    <nav class="steps__menu">
+    <div class="steps__menu">
         <ul class="steps__menu--items">
             <li><a class="steps__menu--item back" href="index.php?page=tutorial">Verlaat de tutorial</a></li>
             <li class="steps__menu--item tip">Vraag tips</li>
         </ul>
-    </nav>
+    </div>
     <section class="step">
+        <h2 class="hidden">Landingspagina</h2>
         <div class="step__wrapper">
             <div class="step__left">
                 <div class="step__intro">

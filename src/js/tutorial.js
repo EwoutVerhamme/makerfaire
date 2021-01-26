@@ -179,6 +179,7 @@
               funAnimation.play()
             }
           }, 3000);
+          updateAnimation(0, 47)
           break;
         case "want":
           loadHandtrack()
@@ -202,21 +203,22 @@
         case "btnStep0":
           stepIndex = 1;
           renderStep()
-          updateAnimation(0, 25)
+          updateAnimation(47, 78)
           break;
         case "btnStep1":
           stepIndex = 2;
           renderStep()
-          updateAnimation(25, 62)
+          updateAnimation(78, 139)
           break;
         case "btnStep2":
           stepIndex = 3;
           renderStep()
-          updateAnimation(82, 123)
+          updateAnimation(139, 218)
           break;
         case "btnStep3":
           stepIndex = 4;
           renderStep()
+          updateAnimation(218, 305)
           break;
         default:
           console.log("ErrorButtonTutorial")
@@ -230,7 +232,9 @@
       $header.style.display = "none"
     }
     if ($stepsWrapper) {
-      $stepsWrapper.style.display = "grid"
+      $stepsWrapper.style.display = "flex";
+      $stepsWrapper.style.flexDirection = "column";
+      $stepsWrapper.style.justifyContent = "space-between"
       $stepsWrapper.style.filter = "blur(0px)";
     }
     localStorage.setItem('step', stepIndex);
@@ -243,6 +247,7 @@
       button.setAttribute("id", `btnStep${stepIndex}`);
       button.textContent = buttonText[stepIndex];
       $stepTitle.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/title.svg`)
+      $stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/step${stepIndex}.svg`)
       $stepText.textContent = text[stepIndex];
     });
     if (stepIndex === "0") {
@@ -251,32 +256,35 @@
           funAnimation.play()
         }
       }, 3000);
+      updateAnimation(0, 47)
     }
     if (stepIndex === "1") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
-      updateAnimation(0, 25)
+      updateAnimation(47, 78)
     }
     if (stepIndex === "2") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
-      updateAnimation(25, 62)
+      updateAnimation(78, 139)
     }
     if (stepIndex === "3") {
       if ($lottieFun) {
         $lottieFun.style.display = "none";
       }
-      updateAnimation(82, 123)
+      updateAnimation(139, 218)
     }
     if (stepIndex === "4") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
-      console.log("step 5 incoming")
+      $showImgButton.style.display = "none"
+
+      updateAnimation(218, 305)
     }
-    // updateIndicators()
+    updateIndicators()
   }
 
   const updateAnimation = (firstFrame, lastFrame) => {
@@ -311,21 +319,21 @@
   });
 
 
-  // const updateIndicators = () => {
-  //   const $mobileIndicators = document.querySelectorAll('.mobile__buttons');
-  //   const $desktopIndicators = document.querySelectorAll('.step__indicator--number');
-  //   let j;
-  //   for (j = 0; j <= stepIndex; j++) {
-  //     if ($mobileIndicators && $desktopIndicators) {
-  //       $mobileIndicators[j].classList.add("step__indicator--activemobile");
-  //       $desktopIndicators[j].classList.add("step__indicator--active");
-  //     }
-  //   }
-  //   if ($desktopIndicators) {
-  //     $mobileIndicators[j].classList.remove("step__indicator--activemobile");
-  //     $desktopIndicators[j].classList.remove("step__indicator--active");
-  //   }
-  // }
+  const updateIndicators = () => {
+    const $mobileIndicators = document.querySelectorAll('.mobile__buttons');
+    const $desktopIndicators = document.querySelectorAll('.step__indicator--number');
+    let j;
+    for (j = 0; j <= stepIndex; j++) {
+      if ($mobileIndicators && $desktopIndicators) {
+        $mobileIndicators[j].classList.add("step__indicator--activemobile");
+        $desktopIndicators[j].classList.add("step__indicator--active");
+      }
+    }
+    if ($desktopIndicators) {
+      $mobileIndicators[j].classList.remove("step__indicator--activemobile");
+      $desktopIndicators[j].classList.remove("step__indicator--active");
+    }
+  }
 
 
   const init = () => {

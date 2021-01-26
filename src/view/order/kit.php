@@ -1,5 +1,6 @@
 <div class="kit__wrapper">
-    <nav class="nav__big">
+    <h1 class="hidden">DIY Kit</h1>
+    <div class="nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
@@ -12,8 +13,8 @@
                 <li><a class="language__text" href="#">/ FR</a></li>
             </ul>
         </div>
-    </nav>
-    <nav class="nav__wrapper">
+    </div>
+    <div class="nav__wrapper">
         <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"
                 alt="Logo Maker Faire"></a>
         <div class="nav">
@@ -40,7 +41,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <section class="kit">
         <div class="kit__left">

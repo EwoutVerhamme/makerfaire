@@ -45,6 +45,10 @@
 .button__wrapper {
     display: flex;
     justify-content: center;
+
+    @media (--only-medium-screen) {
+        justify-content: flex-start;
+     }
 }
 
 .spacer {
@@ -59,7 +63,7 @@
 }
 
 .info {
-    max-width: 80rem;
+    max-width: 100rem;
     margin-top: 5rem;
     margin: 0 auto;
     display: flex;

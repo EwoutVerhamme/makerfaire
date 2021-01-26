@@ -191,7 +191,7 @@ justify-content: center;
 
     @media (--only-regular-screen) {
         justify-content: space-between;
-        height: 90%;
+        align-items: center;
     }
 
     @media (--only-medium-screen) {
@@ -286,9 +286,6 @@ justify-content: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    width: 95%;
     margin: 0 auto;
 
 
@@ -333,11 +330,11 @@ justify-content: center;
 }
 
 .step__right--img {
-    width: 90%;
+    width: 23rem;
     display: none;
 
     @media (--only-regular-screen) {
-        display: flex;
+        display: none;
     }
 
     @media (--only-medium-screen) {

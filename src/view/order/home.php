@@ -1,5 +1,6 @@
 <header class="header">
-    <nav class="nav__big">
+    <h1 class="hidden">Maker Faire Home</h1>
+    <div class="nav__big">
         <div class="menu">
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
@@ -12,8 +13,8 @@
                 <li><a class="language__text" href="#">/ FR</a></li>
             </ul>
         </div>
-    </nav>
-    <nav class="nav__wrapper">
+    </div>
+    <div class="nav__wrapper">
         <a class="menu__item" href="index.php"><img class="nav__logo" src="../../assets/img/home/logo_nav.svg"
                 alt="Logo Maker Faire"></a>
         <div class="nav">
@@ -40,10 +41,10 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <div class="header__info">
-        <h1 class="header__title">Maak jij de snelste drag-racewagen?</h1>
+        <h2 class="header__title">Maak jij de snelste drag-racewagen?</h2>
         <p class="header__subtext subtext">
             Kom racen met je eigen gebouwde racewagen op de
             Maker Faire <span class="span">30 april, 1 & 2 mei 2021! </span></p>
@@ -66,15 +67,15 @@
             <img src="../../assets/img/home/logo.png" alt="" class="info__left--img">
         </div>
         <div class="info__right">
-            <h1 class="info__title">
+            <h2 class="info__title">
                 Maker Faire 2021
-            </h1>
+            </h2>
             <p class="info__subtext subtext">Blokkeer alvast 30 april, 1 & 2 mei 2021 in je agenda.
                 Want dan gaat de tweede editie van de Makers Faire door in <span class="span">de Chinastraat, een
                     industriële site in hartje
                     Gent.</span></p>
             <div class="button__wrapper">
-                <a href="https://www.makerfairegent.be/" target="_blank" class="button">Website Maker
+                <a rel="noreferrer" href="https://www.makerfairegent.be/" target="_blank" class="button">Website Maker
                     Faire</a>
             </div>
         </div>
