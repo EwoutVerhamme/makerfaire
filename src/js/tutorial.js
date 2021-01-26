@@ -353,6 +353,7 @@
     if (localStorage.getItem("step") && $stepsWrapper) {
       stepIndex = localStorage.getItem("step")
       renderStep()
+      loadHandtrack()
     }
     // Check the windowsize on init
     window.addEventListener('resize', checkWindowSize)
