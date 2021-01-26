@@ -95,18 +95,16 @@
     function runDetection() {
       model.detect(video).then((predictions) => {
         if (predictions.length > 0) {
-          if (stepIndex === undefined) {
-            stepIndex = 0
-          }
-
           console.log(predictions[0].bbox[0]);
-          if (predictions[0].bbox[0] > 200) {
+          if (predictions[0].bbox[0] > 200 && stepIndex === undefined) {
+            stepIndex = 0
+            renderStep()
+          } else {
             if (stepIndex < 4) {
               stepIndex++;
               console.log(stepIndex)
               renderStep()
             }
-
           }
 
           if (predictions[0].bbox[0] < 200) {
