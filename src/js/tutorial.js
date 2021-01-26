@@ -247,7 +247,7 @@
     }
     localStorage.setItem('step', stepIndex);
 
-    const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.", "Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.", "Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.", "Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ", "Nu je het basis-model hebt, is het belangrijk om hier je eigen creativiteit aan te geven. Ga opzoek naar gekke dingen die je kan toevoegen aan de racewagen. Maar zorg hierbij ook dat je geen snelheid verliest! "]
+    const text = ["Elke maker begint zijn avontuur met schetsen. Zodat je zeker weet welke materialen en componenten je nodig hebt. Maak daarom een goede schets. Een top, front & side view zijn hierbij zeker niet overbodig.", "Het eerste en ook het belangrijkste deel van de drag racewagen is de body. Dit deel houdt alles stevig bij elkaar. Je kan het in verschillende maten en figuren maken, zolang hij maar tegen een stootje kan.", "Om je racewagen vooruit te helpen is een aandrijver een belangrijk onderdeel. Dit kan alles zijn. Een mixer, een motor van een speelgoed auto, boormachine. Het is belangrijk om hiervoor de juiste aandrijving te kiezen en goed vooraf te denken hoe je iets zal monteren met de meegeleverde klemmen.", "Zonder de wielen kan je natuurlijk niet rijden. Bevestig de wielen aan je wielas met behulp van de meegeleverde connectie stukken. Draai de wielen stevig aan op de wielas om de speling zo klein mogelijk te houden. ", "De laatste stap is het testen van je racewagen. Zorg er natuurlijk voor dat de wagen nergens tegen kan botsen. Doe na het testen eventuele aanpassingen zodat hij nog sneller kan gaan! Zien we elkaar op de Maker Faire 2021 ? "]
     const buttonText = ["Body", "Aandrijving", "Wielen", "Creativiteit", "Afronden"]
 
     // Set the HTML
@@ -348,24 +348,12 @@
     checkWindowSize()
     if (localStorage.getItem("step") && $stepsWrapper) {
       stepIndex = localStorage.getItem("step")
-      $header.style.display = "none";
-      $stepsWrapper.style.filter = "blur(8px)";
-      $stepsWrapper.style.display = "grid"
-      $popup.style.zIndex = "5";
-      $popup.style.animation = "fadein 2s"
-
-      $popupButton1.setAttribute("id", "dontwant")
-      $popupButton2.setAttribute("id", "want")
-      $popupTitle.innerHTML = "Ooh, nog even dit";
-      $popupSubtext.innerHTML = "Wij maken gebruik van je camera en handen om verder te gaan naar de volgende stap. Zo kan je zelf met vieze handen navigeren door onze tutorial!";
-      $popupButton1.textContent = "Liever niet";
-      $popupButton2.textContent = "Lijkt me leuk!";
+      renderStep()
     }
     // Check the windowsize on init
     window.addEventListener('resize', checkWindowSize)
 
     if ($noHandTrack) {
-      stepIndex = 0;
       $noHandTrack.addEventListener('click', () => {
         if ($popup && $header) {
           $popup.style.display = "none"
