@@ -193,7 +193,7 @@
           loadHandtrack()
           // UPDATE THE POPUP
           $popupTitle.innerHTML = "En dit...";
-          $popupSubtext.innerHTML = "Maak een zwaai beweging met 1 hand voor je camera om naar de volgende stap te gaan. Wil je toch liever klikken of werkt er iets niet? Geen probleem, even goede vrienden!";
+          $popupSubtext.innerHTML = "Houd je rechter hand voor je camera om naar de volgende stap te gaan, linker om een stap terug te gaan. Wil je toch liever klikken of werkt er iets niet? Geen probleem, even goede vrienden!";
           $handtrack.style.display = "flex"
           $noHandTrack.innerHTML = "Ik wil toch liever klikken"
           $popupButtons.style.display = "none";
@@ -235,6 +235,7 @@
   });
 
   const renderStep = () => {
+    checkStepIndex()
     if ($popup && $header) {
       $popup.style.display = "none"
       $header.style.display = "none"
@@ -258,7 +259,10 @@
       $stepImg.setAttribute("src", `../../assets/img/tutorial/step${stepIndex}/step${stepIndex}.svg`)
       $stepText.textContent = text[stepIndex];
     });
-    if (stepIndex === "0") {
+  }
+
+  const checkStepIndex = () => {
+    if (stepIndex == "0") {
       setTimeout(() => {
         if (window.innerWidth > 900) {
           funAnimation.play()
@@ -266,25 +270,25 @@
       }, 3000);
       updateAnimation(0, 47)
     }
-    if (stepIndex === "1") {
+    if (stepIndex == "1") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
       updateAnimation(47, 78)
     }
-    if (stepIndex === "2") {
+    if (stepIndex == "2") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
       updateAnimation(78, 139)
     }
-    if (stepIndex === "3") {
+    if (stepIndex == "3") {
       if ($lottieFun) {
         $lottieFun.style.display = "none";
       }
       updateAnimation(139, 218)
     }
-    if (stepIndex === "4") {
+    if (stepIndex == "4") {
       if ($lottieFun) {
         $lottieFun.style.display = "none"
       }
@@ -294,6 +298,9 @@
     }
     updateIndicators()
   }
+
+
+
 
   const updateAnimation = (firstFrame, lastFrame) => {
     if (window.innerWidth > 900) {
@@ -306,7 +313,6 @@
         animationMobile.playSegments([firstFrame, lastFrame], true)
       }, 1000);
     }
-
   }
 
 
