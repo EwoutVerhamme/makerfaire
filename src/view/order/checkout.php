@@ -45,102 +45,127 @@
         <h3 class="hidden">Bestellen</h3>
         <form action="index.php?page=checkout" method="post" class="checkout__form">
             <input type="hidden" name="action" value="insertOrder">
-            <div class="checkout__info checkout__block">
-                <div class="data__wrapper">
-                    <h2 class="checkout__title">Gegevens</h2>
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="first_name">
-                            <span class="input__label">Voornaam</span>
-                            <input placeholder="John" type="text" id="first_name" name="first_name" class="input"
-                                value="<?php if(!empty($_POST['first_name'])){ echo $_POST['first_name'];} ?>"
-                                required />
-                            <span
-                                class="error"><?php if(!empty($errors['first_name'])){ echo $errors['first_name'];} ?></span>
-                        </label>
-                    </div>
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="last_name">
-                            <span class="input__label">Achternaam</span>
-                            <input placeholder="Doe" type="text" id="last_name" name="last_name" class="input"
-                                value="<?php if(!empty($_POST['last_name'])){ echo $_POST['last_name'];} ?>" required />
-                            <span
-                                class="error"><?php if(!empty($errors['last_name'])){ echo $errors['last_name'];} ?></span>
-                        </label>
-                    </div>
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper" for="email">
-                            <span class="input__label">Email</span>
-                            <input placeholder="John.doe@mail.com" type="text" id="email" name="email" class="input"
-                                value="<?php if(!empty($_POST['email'])){ echo $_POST['email'];} ?>" required />
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
-                        </label>
-                    </div>
 
+            <div class="checkout__info--wrapper">
+                <div class="checkout__info checkout__block">
                     <div class="data__wrapper">
-                        <h2 class="checkout__title">Leveradres</h2>
+                        <h2 class="checkout__title">Gegevens</h2>
                         <div class="input__wrapper">
-                            <label class="input__label--wrapper" for="zipcode">
-                                <span class="input__label">Postcode</span>
-                                <input placeholder="Bijv. 1000" type="text" id="zipcode" name="zipcode" class="input"
-                                    value="<?php if(!empty($_POST['zipcode'])){ echo $_POST['zipcode'];} ?>" required />
+                            <label class="input__label--wrapper" for="first_name">
+                                <span class="input__label">Voornaam</span>
+                                <input placeholder="John" type="text" id="first_name" name="first_name" class="input"
+                                    value="<?php if(!empty($_POST['first_name'])){ echo $_POST['first_name'];} ?>"
+                                    required />
                                 <span
-                                    class="error"><?php if(!empty($errors['zipcode'])){ echo $errors['zipcode'];} ?></span>
+                                    class="error"><?php if(!empty($errors['first_name'])){ echo $errors['first_name'];} ?></span>
                             </label>
                         </div>
                         <div class="input__wrapper">
-                            <label class="input__label--wrapper" for="town">
-                                <span class="input__label">Gemeente</span>
-                                <input placeholder="Brussel" type="text" id="town" name="town" class="input"
-                                    value="<?php if(!empty($_POST['town'])){ echo $_POST['town'];} ?>" required />
-                                <span class="error"><?php if(!empty($errors['town'])){ echo $errors['town'];} ?></span>
+                            <label class="input__label--wrapper" for="last_name">
+                                <span class="input__label">Achternaam</span>
+                                <input placeholder="Doe" type="text" id="last_name" name="last_name" class="input"
+                                    value="<?php if(!empty($_POST['last_name'])){ echo $_POST['last_name'];} ?>"
+                                    required />
+                                <span
+                                    class="error"><?php if(!empty($errors['last_name'])){ echo $errors['last_name'];} ?></span>
                             </label>
                         </div>
                         <div class="input__wrapper">
-                            <label class="input__label--wrapper" for="street">
-                                <span placeholder="Grote Markt 1" class="input__label">Straat & nummer</span>
-                                <input type="text" id="street" name="street" class="input"
-                                    value="<?php if(!empty($_POST['street'])){ echo $_POST['street'];} ?>" required />
+                            <label class="input__label--wrapper" for="email">
+                                <span class="input__label">Email</span>
+                                <input placeholder="John.doe@mail.com" type="text" id="email" name="email" class="input"
+                                    value="<?php if(!empty($_POST['email'])){ echo $_POST['email'];} ?>" required />
                                 <span
-                                    class="error"><?php if(!empty($errors['street'])){ echo $errors['street'];} ?></span>
+                                    class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
                             </label>
+                        </div>
+
+                        <div class="data__wrapper">
+                            <h2 class="checkout__title">Leveradres</h2>
+                            <div class="input__wrapper">
+                                <label class="input__label--wrapper" for="zipcode">
+                                    <span class="input__label">Postcode</span>
+                                    <input placeholder="Bijv. 1000" type="text" id="zipcode" name="zipcode"
+                                        class="input"
+                                        value="<?php if(!empty($_POST['zipcode'])){ echo $_POST['zipcode'];} ?>"
+                                        required />
+                                    <span
+                                        class="error"><?php if(!empty($errors['zipcode'])){ echo $errors['zipcode'];} ?></span>
+                                </label>
+                            </div>
+                            <div class="input__wrapper">
+                                <label class="input__label--wrapper" for="town">
+                                    <span class="input__label">Gemeente</span>
+                                    <input placeholder="Brussel" type="text" id="town" name="town" class="input"
+                                        value="<?php if(!empty($_POST['town'])){ echo $_POST['town'];} ?>" required />
+                                    <span
+                                        class="error"><?php if(!empty($errors['town'])){ echo $errors['town'];} ?></span>
+                                </label>
+                            </div>
+                            <div class="input__wrapper">
+                                <label class="input__label--wrapper" for="street">
+                                    <span placeholder="Grote Markt 1" class="input__label">Straat & nummer</span>
+                                    <input type="text" id="street" name="street" class="input"
+                                        value="<?php if(!empty($_POST['street'])){ echo $_POST['street'];} ?>"
+                                        required />
+                                    <span
+                                        class="error"><?php if(!empty($errors['street'])){ echo $errors['street'];} ?></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout__payment checkout__block">
+                    <h2 class="checkout__title">Betaalmethode</h2>
+                    <div class="checkout__method ">
+                        <div class="input__wrapper">
+                            <label class="input__label--wrapper">
+                                <span class="input__label">Kaarthouder</span>
+                                <input type="text" class="input" required />
+                                <span
+                                    class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
+                            </label>
+                        </div>
+                        <div class="input__wrapper">
+                            <label class="input__label--wrapper">
+                                <span class="input__label">Kaartnummer</span>
+                                <input type="text" class="input" required />
+                                <span
+                                    class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
+                            </label>
+                        </div>
+                        <div class="input__wrapper">
+                            <label class="input__label--wrapper">
+                                <span class="input__label">Vervaldatum</span>
+                                <input type="text" class="input" required />
+                                <span
+                                    class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
+                            </label>
+                        </div>
+                        <div class="checkout__total">
+                            <p class="checkout__total--text">Totaal</p>
+                            <p class="checkout__total--text">€35,00</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="checkout__payment checkout__block">
-                <h2 class="checkout__title">Betaalmethode</h2>
-                <div class="checkout__method ">
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper">
-                            <span class="input__label">Kaarthouder</span>
-                            <input type="text" class="input" required />
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
-                        </label>
-                    </div>
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper">
-                            <span class="input__label">Kaartnummer</span>
-                            <input type="text" class="input" required />
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
-                        </label>
-                    </div>
-                    <div class="input__wrapper">
-                        <label class="input__label--wrapper">
-                            <span class="input__label">Vervaldatum</span>
-                            <input type="text" class="input" required />
-                            <span class="error"><?php if(!empty($errors['email'])){ echo $errors['email'];} ?></span>
-                        </label>
-                    </div>
-                    <div class="checkout__total">
-                        <p class="checkout__total--text">Totaal</p>
-                        <p class="checkout__total--text">€35,00</p>
-                    </div>
+
+
+            <div class="checkout__kit checkout__block">
+                <div class="img__wrapper">
+                    <img src="../../assets/img/checkout/plc.svg" alt="" class="plc">
+                    <h2 class="img__title">DIY-kit</h2>
                 </div>
-
-
-                <div class="checkout__kit checkout__block">
-
+                <div class="kit__amount">
+                    <p class="kit__minus kit__button">-</p>
+                    <input type="number" class="kit__value" id="quantity" name="quantity"
+                        value="<?php if(!empty($_POST['quantity'])){ echo $_POST['quantity'];} ?>" <p
+                        class="kit__plus kit__button">+</p>
+                </div>
+                <div class="kit__price--wrapper">
+                    <p class="kit__price--amount">€35,00</p>
                 </div>
             </div>
             <div class="order__button--wrapper">

@@ -27,15 +27,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+padding-bottom: 3rem;
+    @media (--only-medium-screen) {
+        width: 20rem;
+       }
+       @media (--only-big-screen) {
+        width: 30rem;
+       }
+
+     
 }
 
 
 .lottie__kit{
-width:20%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 80%;
 
 @media (--only-medium-screen) {
- width: 30rem;
+ width: 20rem;
 }
+@media (--only-big-screen) {
+    width: 30rem;
+   }
 }
 
 .kit__right {
@@ -72,9 +89,9 @@ margin-top: 7rem;
     color: var(--colorText);
     font-weight: var(--fontWeightLight);
     max-width: 40rem;
-    margin: 0 auto;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin: 0 auto;
     line-height: 2rem;
 
     @media (--only-medium-screen) {

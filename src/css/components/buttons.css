@@ -69,4 +69,5 @@
   .button__outline:hover {
       border: .2rem solid #00aab6 ;
     background-color: #00aab6;
+    color: white;
   }

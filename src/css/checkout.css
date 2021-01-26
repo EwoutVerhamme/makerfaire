@@ -20,14 +20,10 @@
 }
 
 .checkout__form {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    @media (--only-regular-screen) {
-        grid-template-columns: 2fr 1fr;
-        width: 80%;
-        margin: 0 auto
-   }
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 .checkout__title--big {
@@ -45,43 +41,34 @@
     padding-top: 2rem;
 }
 
-.checkout__info {
-    margin: 1rem;
-
-    @media (--only-regular-screen) {
-        grid-column: 1;
-        grid-row: 1;
+.checkout__info--wrapper {
+    @media (--only-medium-screen) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
    }
 }
 
-.checkout__payment {
-    @media (--only-regular-screen) {
-        grid-column: 2;
-        grid-row: 1;
-   }
+.checkout__info {
+    margin: 1rem;
 }
 
 .checkout__kit {
     height: 15rem;
-
-    @media (--only-regular-screen) {
-        grid-column: 1 / span 2;
-    grid-row: 2;
-   }
 }
 
 .checkout__block {
-    margin: .5rem;
-    background-color: var(--colorBackground);
+    margin: 2rem;
     padding-bottom: 2rem;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .input__wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    max-width: 30rem;
-
-    margin: 0 auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .input__label--wrapper{
@@ -108,7 +95,7 @@
 .checkout__total {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 2rem;
 }
 .checkout__total--text {
@@ -118,6 +105,53 @@
 .order__button--wrapper {
     display: flex;
     justify-content: center;
+
+    @media (--only-medium-screen) {
+        justify-content: flex-end;
+   }
+}
+
+.checkout__kit {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.plc {
+    width: 7rem;
+}
+
+.img__title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.kit__amount {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.kit__amount input {
+    width: 5rem;
+}
+
+.kit__button {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.kit__price--amount {
+font-size: var(--fontMedium);
+font-weight: var(--fontWeightBold);
 }
 
 .order__button {
