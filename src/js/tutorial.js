@@ -92,21 +92,21 @@
       }
     });
 
+
     function runDetection() {
       model.detect(video).then((predictions) => {
         if (predictions.length > 0) {
-          console.log(predictions[0].bbox[0]);
-          if (predictions[0].bbox[0] > 200 && stepIndex === undefined) {
+          if (stepIndex === undefined) {
             stepIndex = 0
-            renderStep()
-          } else {
+          }
+          console.log(predictions[0].bbox[0]);
+          if (predictions[0].bbox[0] > 200) {
             if (stepIndex < 4) {
               stepIndex++;
               console.log(stepIndex)
               renderStep()
             }
           }
-
           if (predictions[0].bbox[0] < 200) {
             if (stepIndex > 0) {
               stepIndex--;
@@ -114,9 +114,7 @@
               renderStep()
             }
           }
-
         }
-
         $handtrack.textContent = "Steek je rechter hand omhoog om door te gaan!"
       });
     }
