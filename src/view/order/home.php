@@ -75,7 +75,8 @@
                     industriële site in hartje
                     Gent.</span></p>
             <div class="button__wrapper">
-                <a rel="noreferrer" href="https://www.makerfairegent.be/" target="_blank" class="button">Website Maker
+                <a rel="noreferrer" href="https://www.makerfairegent.be/" target="_blank" class="a__button">Website
+                    Maker
                     Faire</a>
             </div>
         </div>

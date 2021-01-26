@@ -24,7 +24,8 @@ class OrderController extends Controller {
   }
 
   public function checkout() {
-
+    $this->set('title', 'Bestellen');
+    
     if(!empty($_POST['action'])){
       if($_POST['action'] == 'insertOrder'){
         $insertedOrder = $this->orderDAO->insertOrder($_POST);
@@ -37,7 +38,6 @@ class OrderController extends Controller {
           exit();
         }
       }
-    $this->set('title', 'Bestellen');
   }
 
   }

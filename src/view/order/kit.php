@@ -45,14 +45,14 @@
 
     <section class="kit">
         <div class="kit__left">
-            <img src="../../assets/img/kit/plc.svg" alt="Placeholder" class="kit__left--img">
+            <div id="lottie__kit" class="lottie__kit"></div>
         </div>
         <div class="kit__right">
             <div class="kit__info--wrapper">
                 <h1 class="kit__title">DIY-kit basisracewagen</h1>
                 <p class="kit__subtext">Het pakket zit boordevol items om je drag-racewagen basis-model mee te gaan
                     bouwen.
-                    Je hoeft het alleen je eigen DIY-makers touch te geven. Bekijk het pakket of bestel direct één!
+                    Je hoeft het alleen maar je eigen DIY-makers touch te geven. Bekijk het pakket of bestel direct één!
                 </p>
                 <p class="kit__price">€35,00</p>
             </div>

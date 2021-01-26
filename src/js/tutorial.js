@@ -22,7 +22,15 @@
   const $noHandTrack = document.querySelector('.nohandtrack');
 
 
-
+  // LOTTIE FILES
+  const $lottieKit = document.getElementById('lottie__kit');
+  lottie.loadAnimation({
+    container: $lottieKit, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'assets/lottie/kit.json' // the path to the animation json
+  });
 
   // LOTTIE FILES
   const $lottieContainer = document.getElementById('lottie-container');

@@ -159,73 +159,8 @@
     margin-right: 2rem;
 }
 
-.car__home {
-    width: 15rem;
-    left: 0rem;
-    bottom: 2rem;
-
-    @media (--only-regular-screen) {
-        width: 35rem;
-        left: 0rem;
-        bottom: 15rem;
-    }
-
-    @media (--only-medium-screen) {
-        width: 45rem;
-        left: 0rem;
-        bottom: 0rem;
-    }
-
-    @media (--only-wide-screen) {
-        left: 20rem;
-        width: 55rem;
-    }
-}
-
-.protractor {
-    width: 13rem;
-    right: 5rem;
-    bottom: 12rem;
-
-    @media (--only-regular-screen) {
-        width: 30rem;
-        right: 4rem;
-        bottom: 30rem;
-    }
-
-    @media (--only-medium-screen) {
-        bottom: 25rem;
-    }
-
-    @media (--only-wide-screen) {
-        right: 10rem;
-        width: 35rem;
-    }
-
-}
-
-.triangle {
-    width: 10rem;
-    right: 2rem;
-    bottom: 2rem;
-
-
-    @media (--only-regular-screen) {
-        width: 25rem;
-        right: 14rem;
-        bottom: 5rem;
-    }
-
-    @media (--only-wide-screen) {
-        width: 30rem;
-        right: 30rem;
-    }
-
-}
-
 .sponser__img {
-    width: auto;
-    height: auto;
+    height: 2rem;
 }
 
 @keyframes fadein {

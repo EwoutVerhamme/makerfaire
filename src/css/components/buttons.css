@@ -13,6 +13,7 @@
     cursor: pointer;
     margin: 1rem;
     z-index: 1;
+    transition: .2s ease-in-out;
 }
 
 .button__outline {
@@ -29,7 +30,8 @@
     font-size: var(--fontRegular);
     cursor: pointer;
     margin: 1rem;   
-     z-index: 1;
+    z-index: 1;
+    transition: .2s ease-in-out;
 }
 
 .a__button {
@@ -43,11 +45,28 @@
     width: 22rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: var(--fontMedium);
+    font-size: var(--fontRegular);
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     cursor: pointer;
     z-index: 1;
+    transition: .2s ease-in-out;
 }
+
+.menu__item--highlight:hover{
+    background-color: #00aab6;
+  }
+
+  .a__button:hover {
+    background-color: #00aab6;
+  }
+  .button:hover {
+    background-color: #00aab6;
+  }
+
+  .button__outline:hover {
+      border: .2rem solid #00aab6 ;
+    background-color: #00aab6;
+  }

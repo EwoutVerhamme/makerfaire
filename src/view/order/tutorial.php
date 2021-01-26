@@ -8,9 +8,8 @@
                     Hebt u al het materiaal?
                 </p>
                 <p class="popup__subtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam.
+                    Het is belangrijk dat u al het materiaal hebt om van start te gaan met deze tutorial. Indien u nog
+                    niet over al het materiaal beschikt kunt u een DIY-kit bestellen of de materiaallijst raadplegen.
                 </p>
             </div>
             <div class="popup__buttons">
@@ -33,7 +32,7 @@
             <a class="menu__item" href="index.php"><img class="nav__big--logo" src="
                     ../../assets/img/home/logo_nav.svg" alt="Logo Maker Faire"></a>
             <ul class="menu__items">
-                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
+                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                 </li>
@@ -55,7 +54,7 @@
                     <div>
                         <div>
                             <ul>
-                                <li><a class="menu__item active" href="#makerfaire">Maker Faire</a></li>
+                                <li><a class="menu__item active" href="index.php">Maker Faire</a></li>
                                 <li><a class="menu__item" href="index.php?page=kit">DIY-pakket</a></li>
                                 <li><a class="menu__item--highlight" href="index.php?page=tutorial">Tutorial</a>
                                 </li>

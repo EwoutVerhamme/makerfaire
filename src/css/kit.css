@@ -1,5 +1,5 @@
 .kit__wrapper {
-    height: 100%;
+    min-height: 100%;
     width: 100vw;
     background-image: url(/assets/img/home/header_bg.svg);
     background-position: center;
@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    padding-top: 10rem;
 
     @media (--only-medium-screen) {
          flex-direction: row;
@@ -31,7 +30,7 @@
 }
 
 
-.kit__left--img {
+.lottie__kit{
 width:20%;
 
 @media (--only-medium-screen) {
@@ -67,15 +66,16 @@ margin-top: 7rem;
 }
 
 .kit__subtext {
-    margin-top: 2rem;
+    padding-top: 2rem;
     font-size: var(--fontSmall);
     text-align: center;
     color: var(--colorText);
     font-weight: var(--fontWeightLight);
-    margin-left: 1rem;
-    margin-right: 1rem;
     max-width: 40rem;
     margin: 0 auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 2rem;
 
     @media (--only-medium-screen) {
         text-align: left;
@@ -101,6 +101,7 @@ margin-top: 7rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
 
     @media (--only-regular-screen) {
         flex-direction: row;
